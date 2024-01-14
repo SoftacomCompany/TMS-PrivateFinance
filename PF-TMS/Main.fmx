@@ -1,0 +1,1520 @@
+object MainForm: TMainForm
+  Left = 0
+  Top = 0
+  Caption = 'Private finance'
+  ClientHeight = 585
+  ClientWidth = 966
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object Ribbon: TTMSFNCRibbon
+    Align = Top
+    Size.Width = 966.000000000000000000
+    Size.Height = 165.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    GroupAppearance.Font.Color = xFFF1F1F1
+    GroupAppearance.Font.Name = 'Segoe UI'
+    GroupAppearance.Fill.Color = xFF015C9F
+    GroupAppearance.Stroke.Color = xFF015C9F
+    GroupAppearance.BorderStroke.Color = xFF015C9F
+    Groups = <>
+    object TMSFNCRibbon1BottomContainer: TTMSFNCRibbonBottomContainer
+      Align = Bottom
+      Position.Y = 165.000000000000000000
+      Size.Width = 966.000000000000000000
+      Size.Height = 0.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Stroke.Color = claWhite
+      Container = False
+    end
+    object TMSFNCRibbon1Wrapper: TTMSFNCRibbonToolBarWrapper
+      Color = xFF0173C7
+      Align = Top
+      Size.Width = 966.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Fill.Color = xFF0173C7
+      Stroke.Color = xFF0173C7
+      object TMSFNCRibbon1Icon: TTMSFNCRibbonIcon
+        Color = xFF0173C7
+        Align = Left
+        Margins.Left = 3.000000000000000000
+        Margins.Top = 3.000000000000000000
+        Margins.Right = 3.000000000000000000
+        Margins.Bottom = 3.000000000000000000
+        Position.X = 3.000000000000000000
+        Position.Y = 3.000000000000000000
+        Size.Width = 28.000000000000000000
+        Size.Height = 24.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Font.Name = 'Segoe UI'
+        StretchBitmapIfNoText = False
+        Bitmaps = <>
+        LargeLayoutBitmaps = <>
+        DisabledBitmaps = <>
+        HoverBitmaps = <>
+        LargeLayoutDisabledBitmaps = <>
+        LargeLayoutHoverBitmaps = <>
+        BitmapSize = 16.000000000000000000
+        Appearance.NormalFill.Color = xFF0173C7
+        Appearance.NormalStroke.Color = xFF0173C7
+        Appearance.HoverFill.Color = xFF0173C7
+        Appearance.HoverStroke.Color = xFF0173C7
+        Appearance.DownFill.Color = xFF0173C7
+        Appearance.DownStroke.Color = xFF0173C7
+        Appearance.FlatStyle = True
+        ControlIndex = 0
+        ButtonType = 5
+      end
+      object TMSFNCRibbon1QAT: TTMSFNCRibbonQAT
+        Color = xFF0173C7
+        Align = Left
+        Margins.Left = 3.000000000000000000
+        Margins.Top = 3.000000000000000000
+        Margins.Right = 3.000000000000000000
+        Margins.Bottom = 3.000000000000000000
+        Position.X = 37.000000000000000000
+        Position.Y = 3.000000000000000000
+        Size.Width = 30.000000000000000000
+        Size.Height = 24.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        AutoHeight = False
+        AutoStretchHeight = True
+        Appearance.FlatStyle = True
+        Appearance.Fill.Color = xFF0173C7
+        Appearance.Stroke.Color = xFF0173C7
+        Appearance.HorizontalSpacing = 0.000000000000000000
+        Appearance.VerticalSpacing = 0.000000000000000000
+        Appearance.DragGrip = False
+        CompactBitmaps = <>
+        CompactAppearance.NormalFill.Color = xFF0173C7
+        CompactAppearance.NormalStroke.Color = xFF0173C7
+        CompactAppearance.HoverFill.Color = xFFC5C5C5
+        CompactAppearance.HoverStroke.Color = xFFC5C5C5
+        CompactAppearance.DownFill.Color = xFFAEAEAE
+        CompactAppearance.DownStroke.Color = xFFAEAEAE
+        CompactAppearance.FlatStyle = True
+        QuickMenuButtonAppearance.NormalFill.Color = xFF0173C7
+        QuickMenuButtonAppearance.NormalStroke.Color = xFF0173C7
+        QuickMenuButtonAppearance.HoverFill.Color = xFFC5C5C5
+        QuickMenuButtonAppearance.HoverStroke.Color = xFFC5C5C5
+        QuickMenuButtonAppearance.DownFill.Color = xFFAEAEAE
+        QuickMenuButtonAppearance.DownStroke.Color = xFFAEAEAE
+        QuickMenuButtonAppearance.FlatStyle = True
+        Font.Name = 'Segoe UI'
+        OptionsMenu.ShowItemBitmap = False
+        Stroke.Color = xFF0173C7
+        Fill.Color = xFF0173C7
+      end
+      object TMSFNCRibbon1Caption: TTMSFNCRibbonCaption
+        Color = xFF0173C7
+        Position.X = 440.000000000000000000
+        Position.Y = 1.000000000000000000
+        Size.Width = 85.000000000000000000
+        Size.Height = 28.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        AutoSizeSpacing = 4.000000000000000000
+        Font.Color = xFFF1F1F1
+        Font.Name = 'Segoe UI'
+        Trimming = gttCharacter
+        Fill.Color = xFF0173C7
+        Stroke.Color = xFF0173C7
+        Text = 'Private finance'
+      end
+      object TMSFNCRibbon1SystemMenu: TTMSFNCRibbonSystemMenu
+        Color = xFF0173C7
+        Align = Right
+        Position.X = 786.000000000000000000
+        Size.Width = 180.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        AutoHeight = False
+        AutoStretchHeight = True
+        Appearance.FlatStyle = True
+        Appearance.Fill.Color = xFF0173C7
+        Appearance.Stroke.Color = xFF0173C7
+        Appearance.HorizontalSpacing = 0.000000000000000000
+        Appearance.VerticalSpacing = 0.000000000000000000
+        Appearance.DragGrip = False
+        CompactBitmaps = <>
+        CompactAppearance.NormalFill.Color = xFF0173C7
+        CompactAppearance.NormalStroke.Color = xFF0173C7
+        CompactAppearance.HoverFill.Color = xFFC5C5C5
+        CompactAppearance.HoverStroke.Color = xFFC5C5C5
+        CompactAppearance.DownFill.Color = xFFAEAEAE
+        CompactAppearance.DownStroke.Color = xFFAEAEAE
+        CompactAppearance.FlatStyle = True
+        QuickMenuButtonAppearance.NormalFill.Color = xFF0173C7
+        QuickMenuButtonAppearance.NormalStroke.Color = xFF0173C7
+        QuickMenuButtonAppearance.HoverFill.Color = xFFC5C5C5
+        QuickMenuButtonAppearance.HoverStroke.Color = xFFC5C5C5
+        QuickMenuButtonAppearance.DownFill.Color = xFFAEAEAE
+        QuickMenuButtonAppearance.DownStroke.Color = xFFAEAEAE
+        QuickMenuButtonAppearance.FlatStyle = True
+        Font.Name = 'Segoe UI'
+        OptionsMenu.ShowButton = False
+        Stroke.Color = xFF0173C7
+        Fill.Color = xFF0173C7
+        object TMSFNCRibbon1SystemMenuHelpButton: TTMSFNCRibbonSystemMenuToolBarButton
+          Color = xFF0173C7
+          Size.Width = 45.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Font.Name = 'Segoe UI'
+          StretchBitmapIfNoText = False
+          Bitmaps = <
+            item
+              Bitmap.PNG = {
+                89504E470D0A1A0A0000000D494844520000000C0000000C080600000056755C
+                E7000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                00BA4944415428538590B10DC23010456D17044AA868A868A1A762805053B102
+                832021B1001562001640AC40C10048EC618717E7034A149C277DF9EEFB7C77B2
+                350D8AA218A29C30B3D65ED1ABBAA9703A23218405DA133ED19D788B36F1B209
+                5D9DF7FE549EB2227807BCB1D2DF04CC09E36F28C88A905FB85B2AED869572B4
+                529A86CE3D563A73F665FD47C547BACF64A5E1C18EE2B9D22FB51FF950AE4071
+                E69C7BC84A5316A3A9D21AAD1360C477AE157743F741DBFEC618F30699296446
+                4BEB939D0000000049454E44AE426082}
+            end
+            item
+              Bitmap.PNG = {
+                89504E470D0A1A0A0000000D4948445200000018000000180806000000E0773D
+                F8000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                017A49444154484BCD94BB4AC4501445F3F2812058282A82858DAD0A36828888
+                3F60397EC5602158DAF81D0E0822585B58E914DA88565A8829FC011107259397
+                2B66230492380377C0058793B373EF3E27C925D6A0B1956B4992642B4DD35D62
+                8918751CC7B76DFB8238263A5A564A6D03CC26306F4551B4EE795E0BB31BE42F
+                6211BD414CA2376878FDB3A11FB24931BE8DE3F812A329C9BF70DF466F0641D0
+                21AF49EE1D8C0F69709F3592540AE6FB6118BE904724FD4D66CA646F6CDA9454
+                096B3D1AF8AC6D482AE0281760D32A29E49D5FE54A35AC89F806E7ECD99654A0
+                B441061FEF84CD89CA5A58E793E6F2AA486903266ABBAEDB54D90BE3C4677E59
+                A4F209FA81D7B3C153DCA9340B1F77990311D064419239309FE5043D73A48F24
+                9943E68F989F32BD2BD90C327F1A883986D92FE4817C467892CDC1F4076A302C
+                C91C98DADD6EF795263B92CC4283794E64481E936416269F26F6549A87C98788
+                1995E661FA155ED1BBCA9E30F22FAAA3DF061FFCC6DBBAFE0F58D6376449EB5C
+                B65153E10000000049454E44AE426082}
+              Scale = 1.100000023841858000
+            end>
+          LargeLayoutBitmaps = <>
+          DisabledBitmaps = <
+            item
+              Bitmap.PNG = {
+                89504E470D0A1A0A0000000D494844520000000C0000000C080600000056755C
+                E7000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                00BA4944415428538590B10DC23010456D17044AA868A868A1A762805053B102
+                832021B1001562001640AC40C10048EC618717E7034A149C277DF9EEFB7C77B2
+                350D8AA218A29C30B3D65ED1ABBAA9703A23218405DA133ED19D788B36F1B209
+                5D9DF7FE549EB2227807BCB1D2DF04CC09E36F28C88A905FB85B2AED869572B4
+                529A86CE3D563A73F665FD47C547BACF64A5E1C18EE2B9D22FB51FF950AE4071
+                E69C7BC84A5316A3A9D21AAD1360C477AE157743F741DBFEC618F30699296446
+                4BEB939D0000000049454E44AE426082}
+            end
+            item
+              Bitmap.PNG = {
+                89504E470D0A1A0A0000000D4948445200000018000000180806000000E0773D
+                F8000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                017A49444154484BCD94BB4AC4501445F3F2812058282A82858DAD0A36828888
+                3F60397EC5602158DAF81D0E0822585B58E914DA88565A8829FC011107259397
+                2B66230492380377C0058793B373EF3E27C925D6A0B1956B4992642B4DD35D62
+                8918751CC7B76DFB8238263A5A564A6D03CC26306F4551B4EE795E0BB31BE42F
+                6211BD414CA2376878FDB3A11FB24931BE8DE3F812A329C9BF70DF466F0641D0
+                21AF49EE1D8C0F69709F3592540AE6FB6118BE904724FD4D66CA646F6CDA9454
+                096B3D1AF8AC6D482AE0281760D32A29E49D5FE54A35AC89F806E7ECD99654A0
+                B441061FEF84CD89CA5A58E793E6F2AA486903266ABBAEDB54D90BE3C4677E59
+                A4F209FA81D7B3C153DCA9340B1F77990311D064419239309FE5043D73A48F24
+                9943E68F989F32BD2BD90C327F1A883986D92FE4817C467892CDC1F4076A302C
+                C91C98DADD6EF795263B92CC4283794E64481E936416269F26F6549A87C98788
+                1995E661FA155ED1BBCA9E30F22FAAA3DF061FFCC6DBBAFE0F58D6376449EB5C
+                B65153E10000000049454E44AE426082}
+              Scale = 1.100000023841858000
+            end>
+          HoverBitmaps = <
+            item
+              Bitmap.PNG = {
+                89504E470D0A1A0A0000000D494844520000000C0000000C080600000056755C
+                E7000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                00BA4944415428538590B10DC23010456D17044AA868A868A1A762805053B102
+                832021B1001562001640AC40C10048EC618717E7034A149C277DF9EEFB7C77B2
+                350D8AA218A29C30B3D65ED1ABBAA9703A23218405DA133ED19D788B36F1B209
+                5D9DF7FE549EB2227807BCB1D2DF04CC09E36F28C88A905FB85B2AED869572B4
+                529A86CE3D563A73F665FD47C547BACF64A5E1C18EE2B9D22FB51FF950AE4071
+                E69C7BC84A5316A3A9D21AAD1360C477AE157743F741DBFEC618F30699296446
+                4BEB939D0000000049454E44AE426082}
+            end
+            item
+              Bitmap.PNG = {
+                89504E470D0A1A0A0000000D4948445200000018000000180806000000E0773D
+                F8000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                017A49444154484BCD94BB4AC4501445F3F2812058282A82858DAD0A36828888
+                3F60397EC5602158DAF81D0E0822585B58E914DA88565A8829FC011107259397
+                2B66230492380377C0058793B373EF3E27C925D6A0B1956B4992642B4DD35D62
+                8918751CC7B76DFB8238263A5A564A6D03CC26306F4551B4EE795E0BB31BE42F
+                6211BD414CA2376878FDB3A11FB24931BE8DE3F812A329C9BF70DF466F0641D0
+                21AF49EE1D8C0F69709F3592540AE6FB6118BE904724FD4D66CA646F6CDA9454
+                096B3D1AF8AC6D482AE0281760D32A29E49D5FE54A35AC89F806E7ECD99654A0
+                B441061FEF84CD89CA5A58E793E6F2AA486903266ABBAEDB54D90BE3C4677E59
+                A4F209FA81D7B3C153DCA9340B1F77990311D064419239309FE5043D73A48F24
+                9943E68F989F32BD2BD90C327F1A883986D92FE4817C467892CDC1F4076A302C
+                C91C98DADD6EF795263B92CC4283794E64481E936416269F26F6549A87C98788
+                1995E661FA155ED1BBCA9E30F22FAAA3DF061FFCC6DBBAFE0F58D6376449EB5C
+                B65153E10000000049454E44AE426082}
+              Scale = 1.100000023841858000
+            end>
+          LargeLayoutDisabledBitmaps = <>
+          LargeLayoutHoverBitmaps = <>
+          BitmapVisible = True
+          BitmapSize = 12.000000000000000000
+          Appearance.NormalFill.Color = xFF0173C7
+          Appearance.NormalStroke.Color = xFF0173C7
+          Appearance.HoverFill.Color = xFF2A8AD4
+          Appearance.HoverStroke.Color = xFF2A8AD4
+          Appearance.DownFill.Color = xFF015C9F
+          Appearance.DownStroke.Color = xFF015C9F
+          Appearance.FlatStyle = True
+          ControlIndex = 0
+          ButtonType = 1
+        end
+        object TMSFNCRibbon1SystemMenuMinimizeButton: TTMSFNCRibbonSystemMenuToolBarButton
+          Tag = 1
+          Color = xFF0173C7
+          Position.X = 45.000000000000000000
+          Size.Width = 45.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          Font.Name = 'Segoe UI'
+          StretchBitmapIfNoText = False
+          Bitmaps = <
+            item
+              Bitmap.PNG = {
+                89504E470D0A1A0A0000000D494844520000000A000000010806000000E7F53F
+                7E000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                001049444154185763FC0F040C040103030099B803FE7E639283000000004945
+                4E44AE426082}
+            end
+            item
+              Bitmap.PNG = {
+                89504E470D0A1A0A0000000D494844520000000F0000000308060000004C1455
+                31000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                001749444154185763FC0F040C640226284D16A04033030300D2280402EB0F36
+                580000000049454E44AE426082}
+              Scale = 1.100000023841858000
+            end>
+          LargeLayoutBitmaps = <>
+          DisabledBitmaps = <
+            item
+              Bitmap.PNG = {
+                89504E470D0A1A0A0000000D494844520000000A000000010806000000E7F53F
+                7E000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                001049444154185763FC0F040C040103030099B803FE7E639283000000004945
+                4E44AE426082}
+            end
+            item
+              Bitmap.PNG = {
+                89504E470D0A1A0A0000000D494844520000000F0000000308060000004C1455
+                31000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                001749444154185763FC0F040C640226284D16A04033030300D2280402EB0F36
+                580000000049454E44AE426082}
+              Scale = 1.100000023841858000
+            end>
+          HoverBitmaps = <
+            item
+              Bitmap.PNG = {
+                89504E470D0A1A0A0000000D494844520000000A000000010806000000E7F53F
+                7E000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                001049444154185763FC0F040C040103030099B803FE7E639283000000004945
+                4E44AE426082}
+            end
+            item
+              Bitmap.PNG = {
+                89504E470D0A1A0A0000000D494844520000000F0000000308060000004C1455
+                31000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                001749444154185763FC0F040C640226284D16A04033030300D2280402EB0F36
+                580000000049454E44AE426082}
+              Scale = 1.100000023841858000
+            end>
+          LargeLayoutDisabledBitmaps = <>
+          LargeLayoutHoverBitmaps = <>
+          BitmapVisible = True
+          BitmapSize = 10.000000000000000000
+          Appearance.NormalFill.Color = xFF0173C7
+          Appearance.NormalStroke.Color = xFF0173C7
+          Appearance.HoverFill.Color = xFF2A8AD4
+          Appearance.HoverStroke.Color = xFF2A8AD4
+          Appearance.DownFill.Color = xFF015C9F
+          Appearance.DownStroke.Color = xFF015C9F
+          Appearance.FlatStyle = True
+          ControlIndex = 1
+          ButtonType = 3
+        end
+        object TMSFNCRibbon1SystemMenuMaximizeButton: TTMSFNCRibbonSystemMenuToolBarButton
+          Tag = 2
+          Color = xFF0173C7
+          Position.X = 90.000000000000000000
+          Size.Width = 45.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          Font.Name = 'Segoe UI'
+          StretchBitmapIfNoText = False
+          Bitmaps = <
+            item
+              Bitmap.PNG = {
+                89504E470D0A1A0A0000000D494844520000000A0000000A08060000008D32CF
+                BD000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                002149444154285363FC0F040C440026284D18106322480DD1260E2B85440638
+                03030093411001155FCA800000000049454E44AE426082}
+            end
+            item
+              Bitmap.PNG = {
+                89504E470D0A1A0A0000000D494844520000000F0000000F08060000003BD695
+                4A000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                002949444154384F63FC0F040C640226284D161838CD0CE4FA19A46F88FA7954
+                33898022CD14E42A0606004292100BC42173590000000049454E44AE426082}
+              Scale = 1.100000023841858000
+            end>
+          LargeLayoutBitmaps = <>
+          DisabledBitmaps = <
+            item
+              Bitmap.PNG = {
+                89504E470D0A1A0A0000000D494844520000000A0000000A08060000008D32CF
+                BD000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                002149444154285363FC0F040C440026284D18106322480DD1260E2B85440638
+                03030093411001155FCA800000000049454E44AE426082}
+            end
+            item
+              Bitmap.PNG = {
+                89504E470D0A1A0A0000000D494844520000000F0000000F08060000003BD695
+                4A000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                002949444154384F63FC0F040C640226284D161838CD0CE4FA19A46F88FA7954
+                33898022CD14E42A0606004292100BC42173590000000049454E44AE426082}
+              Scale = 1.100000023841858000
+            end>
+          HoverBitmaps = <
+            item
+              Bitmap.PNG = {
+                89504E470D0A1A0A0000000D494844520000000A0000000A08060000008D32CF
+                BD000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                002149444154285363FC0F040C440026284D18106322480DD1260E2B85440638
+                03030093411001155FCA800000000049454E44AE426082}
+            end
+            item
+              Bitmap.PNG = {
+                89504E470D0A1A0A0000000D494844520000000F0000000F08060000003BD695
+                4A000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                002949444154384F63FC0F040C640226284D161838CD0CE4FA19A46F88FA7954
+                33898022CD14E42A0606004292100BC42173590000000049454E44AE426082}
+              Scale = 1.100000023841858000
+            end>
+          LargeLayoutDisabledBitmaps = <>
+          LargeLayoutHoverBitmaps = <>
+          BitmapVisible = True
+          BitmapSize = 10.000000000000000000
+          Appearance.NormalFill.Color = xFF0173C7
+          Appearance.NormalStroke.Color = xFF0173C7
+          Appearance.HoverFill.Color = xFF2A8AD4
+          Appearance.HoverStroke.Color = xFF2A8AD4
+          Appearance.DownFill.Color = xFF015C9F
+          Appearance.DownStroke.Color = xFF015C9F
+          Appearance.FlatStyle = True
+          ControlIndex = 2
+          ButtonType = 4
+        end
+        object TMSFNCRibbon1SystemMenuCloseButton: TTMSFNCRibbonSystemMenuToolBarButton
+          Tag = 3
+          Color = xFF0173C7
+          Position.X = 135.000000000000000000
+          Size.Width = 45.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 3
+          Font.Name = 'Segoe UI'
+          StretchBitmapIfNoText = False
+          Bitmaps = <
+            item
+              Bitmap.PNG = {
+                89504E470D0A1A0A0000000D494844520000000A0000000A08060000008D32CF
+                BD000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                00574944415428538D90D10900200844A301DAA5BFF61F4CF38581644407D279
+                BE8A2A6A129161D5CA2132663034CB9C70845853E07DCA6EBB3B95A02D820D20
+                7C84AAAF7FF2D3DE576308E2E09601E6D799F071F6F9E1AA13689DEA1D628720
+                080000000049454E44AE426082}
+            end
+            item
+              Bitmap.PNG = {
+                89504E470D0A1A0A0000000D494844520000000E0000000E08060000001F482D
+                D1000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                007249444154384FA5925B0E80201003C1FBDF59E9A6253CBA62E27C20B01D5E
+                B1809BC4E005C62257D511B5C1EEC49ABBF8EDAC01E0E662755BE0CE59AD1FCB
+                051C72A6FB9CE471A34904993C4A607B9CAFFC3FEA491292A3719202596DFB73
+                8024E132DBE3AC1270730156041CA630D672A53C89CE5BE8223B0A4B00000000
+                49454E44AE426082}
+              Scale = 1.100000023841858000
+            end>
+          LargeLayoutBitmaps = <>
+          DisabledBitmaps = <
+            item
+              Bitmap.PNG = {
+                89504E470D0A1A0A0000000D494844520000000A0000000A08060000008D32CF
+                BD000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                00574944415428538D90D10900200844A301DAA5BFF61F4CF38581644407D279
+                BE8A2A6A129161D5CA2132663034CB9C70845853E07DCA6EBB3B95A02D820D20
+                7C84AAAF7FF2D3DE576308E2E09601E6D799F071F6F9E1AA13689DEA1D628720
+                080000000049454E44AE426082}
+            end
+            item
+              Bitmap.PNG = {
+                89504E470D0A1A0A0000000D494844520000000E0000000E08060000001F482D
+                D1000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                007249444154384FA5925B0E80201003C1FBDF59E9A6253CBA62E27C20B01D5E
+                B1809BC4E005C62257D511B5C1EEC49ABBF8EDAC01E0E662755BE0CE59AD1FCB
+                051C72A6FB9CE471A34904993C4A607B9CAFFC3FEA491292A3719202596DFB73
+                8024E132DBE3AC1270730156041CA630D672A53C89CE5BE8223B0A4B00000000
+                49454E44AE426082}
+              Scale = 1.100000023841858000
+            end>
+          HoverBitmaps = <
+            item
+              Bitmap.PNG = {
+                89504E470D0A1A0A0000000D494844520000000A0000000A08060000008D32CF
+                BD000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                00574944415428538D90D10900200844A301DAA5BFF61F4CF38581644407D279
+                BE8A2A6A129161D5CA2132663034CB9C70845853E07DCA6EBB3B95A02D820D20
+                7C84AAAF7FF2D3DE576308E2E09601E6D799F071F6F9E1AA13689DEA1D628720
+                080000000049454E44AE426082}
+            end
+            item
+              Bitmap.PNG = {
+                89504E470D0A1A0A0000000D494844520000000E0000000E08060000001F482D
+                D1000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                007249444154384FA5925B0E80201003C1FBDF59E9A6253CBA62E27C20B01D5E
+                B1809BC4E005C62257D511B5C1EEC49ABBF8EDAC01E0E662755BE0CE59AD1FCB
+                051C72A6FB9CE471A34904993C4A607B9CAFFC3FEA491292A3719202596DFB73
+                8024E132DBE3AC1270730156041CA630D672A53C89CE5BE8223B0A4B00000000
+                49454E44AE426082}
+              Scale = 1.100000023841858000
+            end>
+          LargeLayoutDisabledBitmaps = <>
+          LargeLayoutHoverBitmaps = <>
+          BitmapVisible = True
+          BitmapSize = 10.000000000000000000
+          Appearance.NormalFill.Color = xFF0173C7
+          Appearance.NormalStroke.Color = xFF0173C7
+          Appearance.HoverFill.Color = xFFE81123
+          Appearance.HoverStroke.Color = xFFE81123
+          Appearance.DownFill.Color = xFFF1707A
+          Appearance.DownStroke.Color = xFFF1707A
+          Appearance.FlatStyle = True
+          ControlIndex = 3
+          ButtonType = 2
+        end
+      end
+    end
+    object TMSFNCRibbon1PageControl: TTMSFNCRibbonPageControl
+      ShowHint = True
+      Color = xFF0173C7
+      Align = Client
+      Size.Width = 966.000000000000000000
+      Size.Height = 135.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Fill.Color = xFF0173C7
+      Stroke.Color = xFF0173C7
+      TabAppearance.Font.Name = 'Segoe UI'
+      TabAppearance.Fill.Kind = gfkNone
+      TabAppearance.Stroke.Kind = gskNone
+      TabAppearance.ActiveFill.Color = xFFF1F1F1
+      TabAppearance.ActiveStroke.Color = xFFF1F1F1
+      TabAppearance.DownFill.Color = xFF015C9F
+      TabAppearance.DownStroke.Color = xFF015C9F
+      TabAppearance.HoverFill.Color = xFF2A8AD4
+      TabAppearance.HoverStroke.Color = xFF2A8AD4
+      TabAppearance.TextSpacing = 17.000000000000000000
+      TabAppearance.Shape = tsRectangle
+      TabAppearance.ShapeOverlap = 0.000000000000000000
+      TabAppearance.ShapeSlope = 0.000000000000000000
+      TabAppearance.ShapeRounding = 10.000000000000000000
+      TabAppearance.TextColor = xFFF1F1F1
+      TabAppearance.ActiveTextColor = xFF0173C7
+      TabAppearance.HoverTextColor = xFFF1F1F1
+      TabAppearance.DownTextColor = xFFF1F1F1
+      TabAppearance.ShowFocus = False
+      TabAppearance.CloseStroke.Width = 2.000000000000000000
+      TabAppearance.CloseDownStroke.Width = 2.000000000000000000
+      TabAppearance.CloseHoverStroke.Width = 2.000000000000000000
+      TabAppearance.BadgeFont.Name = 'Segoe UI'
+      ButtonAppearance.Rounding = 0.000000000000000000
+      ButtonAppearance.Fill.Color = xFFF1F1F1
+      ButtonAppearance.Stroke.Color = xFFF1F1F1
+      ButtonAppearance.DownFill.Color = xFF015C9F
+      ButtonAppearance.DownStroke.Color = xFF015C9F
+      ButtonAppearance.DisabledFill.Color = xFF015C9F
+      ButtonAppearance.DisabledStroke.Color = xFF015C9F
+      ButtonAppearance.HoverFill.Color = xFF2A8AD4
+      ButtonAppearance.HoverStroke.Color = xFF2A8AD4
+      ButtonAppearance.CloseIcon.PNG = {
+        89504E470D0A1A0A0000000D4948445200000018000000180806000000E0773D
+        F8000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+        001849444154484BEDC101010000008220FFAFAE214000005C0D09180001D002
+        5B5E0000000049454E44AE426082}
+      ButtonAppearance.CloseIcon.SVG = {
+        3C7376672077696474683D223234707822206865696768743D22323470782220
+        76696577426F783D223020302032342032342220786D6C6E733D22687474703A
+        2F2F7777772E77332E6F72672F323030302F737667222066696C6C3D226E6F6E
+        65223E3C70617468207374726F6B653D2263757272656E74436F6C6F72222073
+        74726F6B652D6C696E656361703D22726F756E6422207374726F6B652D6C696E
+        656A6F696E3D22726F756E6422207374726F6B652D77696474683D2232222064
+        3D224D3132203132203720376D352035203520356D2D352D3520352D356D2D35
+        20352D352035222F3E3C2F7376673E0D0A}
+      ButtonAppearance.InsertIcon.PNG = {
+        89504E470D0A1A0A0000000D4948445200000018000000180806000000E0773D
+        F8000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+        001849444154484BEDC101010000008220FFAFAE214000005C0D09180001D002
+        5B5E0000000049454E44AE426082}
+      ButtonAppearance.InsertIcon.SVG = {
+        3C3F786D6C2076657273696F6E3D22312E30223F3E0D0A3C73766720786D6C6E
+        733D22687474703A2F2F7777772E77332E6F72672F323030302F737667222078
+        6D6C6E733A786C696E6B3D22687474703A2F2F7777772E77332E6F72672F3139
+        39392F786C696E6B222077696474683D223234707822206865696768743D2232
+        347078222076696577426F783D22302030203234203234222076657273696F6E
+        3D22312E31223E0D0A093C672069643D227375726661636531223E0D0A09093C
+        70617468207374796C653D22207374726F6B653A6E6F6E653B66696C6C2D7275
+        6C653A6E6F6E7A65726F3B66696C6C3A7267622830252C30252C3025293B6669
+        6C6C2D6F7061636974793A313B2220643D224D203132203620432031322E3431
+        3430363220362031322E373520362E3333353933382031322E373520362E3735
+        204C2031322E37352031312E3235204C2031372E32352031312E323520432031
+        372E3636343036322031312E32352031382031312E3538353933382031382031
+        3220432031382031322E3431343036322031372E3636343036322031322E3735
+        2031372E32352031322E3735204C2031322E37352031322E3735204C2031322E
+        37352031372E323520432031322E37352031372E3636343036322031322E3431
+        3430363220313820313220313820432031312E3538353933382031382031312E
+        32352031372E3636343036322031312E32352031372E3235204C2031312E3235
+        2031322E3735204C20362E37352031322E3735204320362E3333353933382031
+        322E373520362031322E3431343036322036203132204320362031312E353835
+        39333820362E3333353933382031312E323520362E37352031312E3235204C20
+        31312E32352031312E3235204C2031312E323520362E373520432031312E3235
+        20362E3333353933382031312E35383539333820362031322036205A204D2031
+        32203620222F3E0D0A093C2F673E0D0A3C2F7376673E0D0A}
+      ButtonAppearance.TabListIcon.PNG = {
+        89504E470D0A1A0A0000000D4948445200000018000000180806000000E0773D
+        F8000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+        001849444154484BEDC101010000008220FFAFAE214000005C0D09180001D002
+        5B5E0000000049454E44AE426082}
+      ButtonAppearance.TabListIcon.SVG = {
+        3C7376672077696474683D223234707822206865696768743D22323470782220
+        76696577426F783D223020302032342032342220786D6C6E733D22687474703A
+        2F2F7777772E77332E6F72672F323030302F737667223E3C7061746820737472
+        6F6B653D2263757272656E74436F6C6F7222207374726F6B652D6C696E656361
+        703D22726F756E6422207374726F6B652D6C696E656A6F696E3D22726F756E64
+        22207374726F6B652D77696474683D22322220643D226D31372031302D352035
+        2D352D35222066696C6C3D226E6F6E65222F3E3C2F7376673E0D0A}
+      ButtonAppearance.ScrollNextIcon.PNG = {
+        89504E470D0A1A0A0000000D4948445200000018000000180806000000E0773D
+        F8000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+        001849444154484BEDC101010000008220FFAFAE214000005C0D09180001D002
+        5B5E0000000049454E44AE426082}
+      ButtonAppearance.ScrollNextIcon.SVG = {
+        3C7376672077696474683D223234707822206865696768743D22323470782220
+        76696577426F783D223020302032342032342220786D6C6E733D22687474703A
+        2F2F7777772E77332E6F72672F323030302F737667223E3C706174682066696C
+        6C3D226E6F6E6522207374726F6B653D2263757272656E74436F6C6F72222073
+        74726F6B652D6C696E656361703D22726F756E6422207374726F6B652D6C696E
+        656A6F696E3D22726F756E6422207374726F6B652D77696474683D2232222064
+        3D226D31302037203520352D352035222F3E3C2F7376673E0D0A}
+      ButtonAppearance.ScrollPreviousIcon.PNG = {
+        89504E470D0A1A0A0000000D4948445200000018000000180806000000E0773D
+        F8000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+        001849444154484BEDC101010000008220FFAFAE214000005C0D09180001D002
+        5B5E0000000049454E44AE426082}
+      ButtonAppearance.ScrollPreviousIcon.SVG = {
+        3C7376672077696474683D223234707822206865696768743D22323470782220
+        76696577426F783D223020302032342032342220786D6C6E733D22687474703A
+        2F2F7777772E77332E6F72672F323030302F737667223E3C706174682066696C
+        6C3D226E6F6E6522207374726F6B653D2263757272656E74436F6C6F72222073
+        74726F6B652D6C696E656361703D22726F756E6422207374726F6B652D6C696E
+        656A6F696E3D22726F756E6422207374726F6B652D77696474683D2232222064
+        3D226D313420372D35203520352035222F3E3C2F7376673E0D0A}
+      TabSize.Height = 30.000000000000000000
+      TabSize.Margins.Left = 64.000000000000000000
+      TabSize.Margins.Top = 7.000000000000000000
+      TabSize.Margins.Right = 150.000000000000000000
+      TabSize.Spacing = 4.000000000000000000
+      Pages = <
+        item
+          Text = 'Expenses'
+          Hint = 'Expenses'
+          Bitmaps = <>
+          DisabledBitmaps = <>
+          UseDefaultAppearance = True
+        end
+        item
+          Text = 'Categories'
+          Hint = 'Categories'
+          Bitmaps = <>
+          DisabledBitmaps = <>
+          UseDefaultAppearance = True
+        end
+        item
+          Text = 'Stores'
+          Hint = 'Stores'
+          Bitmaps = <>
+          DisabledBitmaps = <>
+          UseDefaultAppearance = True
+        end>
+      object RibbonButtonFile: TTMSFNCRibbonFileButton
+        Position.Y = 8.000000000000000000
+        Size.Width = 62.000000000000000000
+        Size.Height = 28.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Font.Color = xFFF1F1F1
+        Font.Name = 'Segoe UI'
+        DropDownKind = ddkDropDown
+        Text = 'File'
+        Bitmaps = <>
+        LargeLayoutBitmaps = <>
+        DisabledBitmaps = <>
+        HoverBitmaps = <>
+        LargeLayoutDisabledBitmaps = <>
+        LargeLayoutHoverBitmaps = <>
+        Appearance.NormalFill.Color = xFF0173C7
+        Appearance.NormalStroke.Color = xFF0173C7
+        Appearance.HoverFill.Color = xFF2A8AD4
+        Appearance.HoverStroke.Color = xFF2A8AD4
+        Appearance.DownFill.Color = xFF015C9F
+        Appearance.DownStroke.Color = xFF015C9F
+        Appearance.FlatStyle = True
+        ShortCutHint = 'F'
+        ControlIndex = 0
+        FileButton = True
+      end
+      object TMSFNCRibbon1PageControlContainer: TTMSFNCRibbonContainer
+        Color = xFF0173C7
+        Position.X = 818.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 147.000000000000000000
+        Size.Height = 28.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Fill.Color = xFF0173C7
+        Stroke.Color = xFF0173C7
+        Container = True
+      end
+      object TMSFNCRibbon1PageControlPage1: TTMSFNCRibbonPageControlContainer
+        Color = xFFF1F1F1
+        Align = Client
+        Margins.Top = 36.000000000000000000
+        Size.Width = 966.000000000000000000
+        Size.Height = 99.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        TabStop = False
+        Fill.Color = xFFF1F1F1
+        Stroke.Color = xFFF1F1F1
+        PageIndex = 1
+        IsActive = False
+      end
+      object TMSFNCRibbon1PageControlPage2: TTMSFNCRibbonPageControlContainer
+        Color = xFFF1F1F1
+        Align = Client
+        Margins.Top = 36.000000000000000000
+        Size.Width = 966.000000000000000000
+        Size.Height = 99.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 4
+        TabStop = False
+        Fill.Color = xFFF1F1F1
+        Stroke.Color = xFFF1F1F1
+        PageIndex = 2
+        IsActive = False
+      end
+      object TMSFNCRibbon1PageControlPage0: TTMSFNCRibbonPageControlContainer
+        Color = xFFF1F1F1
+        Align = Client
+        Margins.Top = 36.000000000000000000
+        Size.Width = 966.000000000000000000
+        Size.Height = 99.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        TabStop = False
+        Fill.Color = xFFF1F1F1
+        Stroke.Color = xFFF1F1F1
+        PageIndex = 0
+        IsActive = True
+        object ToolbarExpenses: TTMSFNCRibbonToolBar
+          Color = xFFF1F1F1
+          Align = Left
+          Margins.Left = 1.000000000000000000
+          Margins.Top = 1.000000000000000000
+          Margins.Right = 1.000000000000000000
+          Margins.Bottom = 1.000000000000000000
+          Position.X = 1.000000000000000000
+          Position.Y = 1.000000000000000000
+          Size.Width = 328.000000000000000000
+          Size.Height = 97.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          AutoHeight = False
+          Appearance.FlatStyle = True
+          Appearance.Fill.Color = xFFF1F1F1
+          Appearance.Stroke.Color = xFFF1F1F1
+          Appearance.Separator = True
+          Appearance.SeparatorStroke.Color = xFFD4D4D4
+          Appearance.DragGrip = False
+          CompactBitmaps = <>
+          CompactAppearance.NormalFill.Color = xFFF1F1F1
+          CompactAppearance.NormalStroke.Color = xFFF1F1F1
+          CompactAppearance.HoverFill.Color = xFFC5C5C5
+          CompactAppearance.HoverStroke.Color = xFFC5C5C5
+          CompactAppearance.DownFill.Color = xFFAEAEAE
+          CompactAppearance.DownStroke.Color = xFFAEAEAE
+          CompactAppearance.FlatStyle = True
+          QuickMenuButtonAppearance.NormalFill.Color = xFFF1F1F1
+          QuickMenuButtonAppearance.NormalStroke.Color = xFFF1F1F1
+          QuickMenuButtonAppearance.HoverFill.Color = xFFC5C5C5
+          QuickMenuButtonAppearance.HoverStroke.Color = xFFC5C5C5
+          QuickMenuButtonAppearance.DownFill.Color = xFFAEAEAE
+          QuickMenuButtonAppearance.DownStroke.Color = xFFAEAEAE
+          QuickMenuButtonAppearance.FlatStyle = True
+          MinimumWidth = 50.000000000000000000
+          Text = 'Operations'
+          Font.Color = xFF444444
+          Font.Name = 'Segoe UI'
+          OptionsMenu.ShowButton = False
+          Stroke.Color = xFFF1F1F1
+          Fill.Color = xFFF1F1F1
+          object btnAdd: TTMSFNCRibbonDefaultToolBarButton
+            Position.X = 3.000000000000000000
+            Position.Y = 3.000000000000000000
+            Size.Width = 34.000000000000000000
+            Size.Height = 73.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            OnClick = btnModifyClick
+            Font.Color = xFF444444
+            Font.Name = 'Segoe UI'
+            Text = 'Add'
+            StretchText = True
+            Bitmaps = <>
+            LargeLayoutBitmaps = <>
+            Layout = bblLarge
+            BitmapPosition = bbpTop
+            DisabledBitmaps = <>
+            HoverBitmaps = <>
+            LargeLayoutDisabledBitmaps = <>
+            LargeLayoutHoverBitmaps = <>
+            Appearance.NormalFill.Color = xFFF1F1F1
+            Appearance.NormalStroke.Color = xFFF1F1F1
+            Appearance.HoverFill.Color = xFFC5C5C5
+            Appearance.HoverStroke.Color = xFFC5C5C5
+            Appearance.DownFill.Color = xFFAEAEAE
+            Appearance.DownStroke.Color = xFFAEAEAE
+            Appearance.FlatStyle = True
+            ControlIndex = 0
+          end
+          object btnEdit: TTMSFNCRibbonDefaultToolBarButton
+            Position.X = 40.000000000000000000
+            Position.Y = 3.000000000000000000
+            Size.Width = 32.000000000000000000
+            Size.Height = 73.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            OnClick = btnModifyClick
+            Font.Color = xFF444444
+            Font.Name = 'Segoe UI'
+            Text = 'Edit'
+            StretchText = True
+            Bitmaps = <>
+            LargeLayoutBitmaps = <>
+            Layout = bblLarge
+            BitmapPosition = bbpTop
+            DisabledBitmaps = <>
+            HoverBitmaps = <>
+            LargeLayoutDisabledBitmaps = <>
+            LargeLayoutHoverBitmaps = <>
+            Appearance.NormalFill.Color = xFFF1F1F1
+            Appearance.NormalStroke.Color = xFFF1F1F1
+            Appearance.HoverFill.Color = xFFC5C5C5
+            Appearance.HoverStroke.Color = xFFC5C5C5
+            Appearance.DownFill.Color = xFFAEAEAE
+            Appearance.DownStroke.Color = xFFAEAEAE
+            Appearance.FlatStyle = True
+            ControlIndex = 1
+          end
+          object TMSFNCRibbonToolBarSeparator1: TTMSFNCRibbonToolBarSeparator
+            Position.X = 75.000000000000000000
+            Position.Y = 3.000000000000000000
+            Size.Width = 3.000000000000000000
+            Size.Height = 30.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 2
+            State = esLarge
+            Appearance.Stroke.Color = xFFF7F7F7
+            Appearance.InnerStroke.Color = xFFC5C5C5
+            ControlIndex = 2
+          end
+          object TMSFNCRibbonDefaultToolBarButton1: TTMSFNCRibbonDefaultToolBarButton
+            Position.X = 81.000000000000000000
+            Position.Y = 3.000000000000000000
+            Size.Width = 46.000000000000000000
+            Size.Height = 73.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 3
+            Font.Color = xFF444444
+            Font.Name = 'Segoe UI'
+            Text = 'Delete'
+            StretchText = True
+            Bitmaps = <>
+            LargeLayoutBitmaps = <>
+            Layout = bblLarge
+            BitmapPosition = bbpTop
+            DisabledBitmaps = <>
+            HoverBitmaps = <>
+            LargeLayoutDisabledBitmaps = <>
+            LargeLayoutHoverBitmaps = <>
+            Appearance.NormalFill.Color = xFFF1F1F1
+            Appearance.NormalStroke.Color = xFFF1F1F1
+            Appearance.HoverFill.Color = xFFC5C5C5
+            Appearance.HoverStroke.Color = xFFC5C5C5
+            Appearance.DownFill.Color = xFFAEAEAE
+            Appearance.DownStroke.Color = xFFAEAEAE
+            Appearance.FlatStyle = True
+            ControlIndex = 3
+          end
+          object TMSFNCRibbonToolBarSeparator2: TTMSFNCRibbonToolBarSeparator
+            Position.X = 130.000000000000000000
+            Position.Y = 3.000000000000000000
+            Size.Width = 3.000000000000000000
+            Size.Height = 24.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 4
+            Appearance.Stroke.Color = xFFF7F7F7
+            Appearance.InnerStroke.Color = xFFC5C5C5
+            ControlIndex = 4
+          end
+          object btnHTMLReport: TTMSFNCRibbonDefaultToolBarButton
+            Position.X = 136.000000000000000000
+            Position.Y = 3.000000000000000000
+            Size.Width = 95.000000000000000000
+            Size.Height = 73.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 5
+            OnClick = btnHTMLReportClick
+            Font.Color = xFF444444
+            Font.Name = 'Segoe UI'
+            Text = 'Export to HTML'
+            StretchText = True
+            Bitmaps = <>
+            LargeLayoutBitmaps = <>
+            Layout = bblLarge
+            BitmapPosition = bbpTop
+            DisabledBitmaps = <>
+            HoverBitmaps = <>
+            LargeLayoutDisabledBitmaps = <>
+            LargeLayoutHoverBitmaps = <>
+            Appearance.NormalFill.Color = xFFF1F1F1
+            Appearance.NormalStroke.Color = xFFF1F1F1
+            Appearance.HoverFill.Color = xFFC5C5C5
+            Appearance.HoverStroke.Color = xFFC5C5C5
+            Appearance.DownFill.Color = xFFAEAEAE
+            Appearance.DownStroke.Color = xFFAEAEAE
+            Appearance.FlatStyle = True
+            ControlIndex = 5
+          end
+          object btnReportExcel: TTMSFNCRibbonDefaultToolBarButton
+            Position.X = 234.000000000000000000
+            Position.Y = 3.000000000000000000
+            Size.Width = 90.000000000000000000
+            Size.Height = 73.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 6
+            Font.Color = xFF444444
+            Font.Name = 'Segoe UI'
+            Text = 'Export to Excel'
+            StretchText = True
+            Bitmaps = <>
+            LargeLayoutBitmaps = <>
+            Layout = bblLarge
+            BitmapPosition = bbpTop
+            DisabledBitmaps = <>
+            HoverBitmaps = <>
+            LargeLayoutDisabledBitmaps = <>
+            LargeLayoutHoverBitmaps = <>
+            Appearance.NormalFill.Color = xFFF1F1F1
+            Appearance.NormalStroke.Color = xFFF1F1F1
+            Appearance.HoverFill.Color = xFFC5C5C5
+            Appearance.HoverStroke.Color = xFFC5C5C5
+            Appearance.DownFill.Color = xFFAEAEAE
+            Appearance.DownStroke.Color = xFFAEAEAE
+            Appearance.FlatStyle = True
+            ControlIndex = 6
+          end
+        end
+        object dtFrom: TTMSFNCDatePicker
+          Position.X = 491.000000000000000000
+          Position.Y = 32.000000000000000000
+          Size.Width = 90.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          Font.Name = 'Segoe UI'
+          FirstDay = 1
+          Events = <>
+          BadgeSize = 14
+          Header.Arrow.ArrowLeftBitmap = <>
+          Header.Arrow.ArrowRightBitmap = <>
+          Header.Font.Name = 'Segoe UI'
+          Footer.Fill.Kind = gfkGradient
+          Footer.Fill.Color = xFFF6F8FC
+          Footer.Fill.ColorTo = xFFEEF2F9
+          Footer.Font.Size = 14.000000000000000000
+          Footer.Font.Color = xFF454545
+          Footer.Font.Name = 'Segoe UI'
+          DropDownWidth = 200.000000000000000000
+          DropDownHeight = 180.000000000000000000
+          OnDateSelected = DateFilterSelected
+          SelectedDate = 45304.000000000000000000
+          WeekNumberAppearance.Font.Color = xFF7A7A7A
+          WeekNumberAppearance.Font.Name = 'Segoe UI'
+          DateAppearance.Font.Color = xFF7A7A7A
+          DateAppearance.Font.Name = 'Segoe UI'
+          DateAppearance.SelectedFill.Color = xFFEEF2F9
+          DateAppearance.SelectedFont.Size = 14.000000000000000000
+          DateAppearance.SelectedFont.Color = xFF454545
+          DateAppearance.SelectedFont.Name = 'Segoe UI'
+          DateAppearance.SelectedFont.StyleExt = {00070000000000000004000000}
+          DateAppearance.SelectedStroke.Color = xFF2D9BEF
+          DateAppearance.DisabledFont.Color = claLightgray
+          DateAppearance.DisabledFont.Name = 'Segoe UI'
+          DateAppearance.DateBeforeFont.Color = xFFBBBBBB
+          DateAppearance.DateBeforeFont.Name = 'Segoe UI'
+          DateAppearance.DateAfterFont.Color = xFFBBBBBB
+          DateAppearance.DateAfterFont.Name = 'Segoe UI'
+          DateAppearance.TodayFont.Color = xFF2D9BEF
+          DateAppearance.TodayFont.Name = 'Segoe UI'
+          DateAppearance.TodayFont.StyleExt = {00070000000000000004000000}
+          DateAppearance.BadgeFont.Size = 10.000000000000000000
+          DateAppearance.BadgeFont.Color = claWhite
+          DateAppearance.BadgeFont.Name = 'Segoe UI'
+          DateAppearance.ShowFocus = False
+          DayNameAppearance.Font.Color = xFF7A7A7A
+          DayNameAppearance.Font.Name = 'Segoe UI'
+          LineAppearance.Stroke.Color = claDarkgray
+        end
+        object Label1: TLabel
+          AutoSize = True
+          Position.X = 432.000000000000000000
+          Position.Y = 32.000000000000000000
+          Size.Width = 51.000000000000000000
+          Size.Height = 16.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'From:'
+          TabOrder = 4
+        end
+        object Label2: TLabel
+          AutoSize = True
+          Position.X = 600.000000000000000000
+          Position.Y = 32.000000000000000000
+          Size.Width = 51.000000000000000000
+          Size.Height = 16.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'To:'
+          TabOrder = 3
+        end
+        object dtTo: TTMSFNCDatePicker
+          Position.X = 659.000000000000000000
+          Position.Y = 32.000000000000000000
+          Size.Width = 90.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          Font.Name = 'Segoe UI'
+          FirstDay = 1
+          Events = <>
+          BadgeSize = 14
+          Header.Arrow.ArrowLeftBitmap = <>
+          Header.Arrow.ArrowRightBitmap = <>
+          Header.Font.Name = 'Segoe UI'
+          Footer.Fill.Kind = gfkGradient
+          Footer.Fill.Color = xFFF6F8FC
+          Footer.Fill.ColorTo = xFFEEF2F9
+          Footer.Font.Size = 14.000000000000000000
+          Footer.Font.Color = xFF454545
+          Footer.Font.Name = 'Segoe UI'
+          DropDownWidth = 200.000000000000000000
+          DropDownHeight = 180.000000000000000000
+          OnDateSelected = DateFilterSelected
+          SelectedDate = 45304.000000000000000000
+          WeekNumberAppearance.Font.Color = xFF7A7A7A
+          WeekNumberAppearance.Font.Name = 'Segoe UI'
+          DateAppearance.Font.Color = xFF7A7A7A
+          DateAppearance.Font.Name = 'Segoe UI'
+          DateAppearance.SelectedFill.Color = xFFEEF2F9
+          DateAppearance.SelectedFont.Size = 14.000000000000000000
+          DateAppearance.SelectedFont.Color = xFF454545
+          DateAppearance.SelectedFont.Name = 'Segoe UI'
+          DateAppearance.SelectedFont.StyleExt = {00070000000000000004000000}
+          DateAppearance.SelectedStroke.Color = xFF2D9BEF
+          DateAppearance.DisabledFont.Color = claLightgray
+          DateAppearance.DisabledFont.Name = 'Segoe UI'
+          DateAppearance.DateBeforeFont.Color = xFFBBBBBB
+          DateAppearance.DateBeforeFont.Name = 'Segoe UI'
+          DateAppearance.DateAfterFont.Color = xFFBBBBBB
+          DateAppearance.DateAfterFont.Name = 'Segoe UI'
+          DateAppearance.TodayFont.Color = xFF2D9BEF
+          DateAppearance.TodayFont.Name = 'Segoe UI'
+          DateAppearance.TodayFont.StyleExt = {00070000000000000004000000}
+          DateAppearance.BadgeFont.Size = 10.000000000000000000
+          DateAppearance.BadgeFont.Color = claWhite
+          DateAppearance.BadgeFont.Name = 'Segoe UI'
+          DateAppearance.ShowFocus = False
+          DayNameAppearance.Font.Color = xFF7A7A7A
+          DayNameAppearance.Font.Name = 'Segoe UI'
+          LineAppearance.Stroke.Color = claDarkgray
+        end
+      end
+    end
+  end
+  object tvCategories: TTMSFNCTreeView
+    Align = Left
+    Position.Y = 165.000000000000000000
+    Size.Width = 201.000000000000000000
+    Size.Height = 420.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 25
+    Stroke.Color = claDarkgray
+    Groups = <>
+    GroupsAppearance.TopSize = 50.000000000000000000
+    GroupsAppearance.BottomSize = 50.000000000000000000
+    GroupsAppearance.TopFill.Kind = gfkNone
+    GroupsAppearance.BottomFill.Kind = gfkNone
+    GroupsAppearance.TopFont.Color = xFF454545
+    GroupsAppearance.TopFont.Name = 'Segoe UI'
+    GroupsAppearance.BottomFont.Color = xFF454545
+    GroupsAppearance.BottomFont.Name = 'Segoe UI'
+    Columns = <
+      item
+        Name = 'Column0'
+        Text = 'Name'
+        Width = 100.000000000000000000
+        Font.Name = 'Segoe UI'
+        TopFont.Name = 'Segoe UI'
+        BottomFont.Name = 'Segoe UI'
+      end
+      item
+        Name = 'Column1'
+        Text = 'Unit'
+        HorizontalTextAlign = gtaTrailing
+        Width = 90.000000000000000000
+        Font.Name = 'Segoe UI'
+        TopFont.Name = 'Segoe UI'
+        BottomFont.Name = 'Segoe UI'
+      end
+      item
+        Name = 'Column2'
+        Text = 'Status'
+        HorizontalTextAlign = gtaCenter
+        Width = 80.000000000000000000
+        Font.Name = 'Segoe UI'
+        TopFont.Name = 'Segoe UI'
+        BottomFont.Name = 'Segoe UI'
+      end>
+    Nodes = <
+      item
+        Values = <
+          item
+            Text = 'Managers'
+          end>
+        Expanded = True
+        Tag = 0
+        Nodes = <
+          item
+            Values = <
+              item
+                Text = 'Isabella Andersson'
+              end
+              item
+                Text = 'Research'
+              end
+              item
+                Text = 'On Leave'
+              end>
+            Tag = 0
+            Nodes = <>
+          end
+          item
+            Values = <
+              item
+                Text = 'Omar Andersson'
+              end
+              item
+                Text = 'Manufactering'
+              end
+              item
+                Text = 'Abroad'
+              end>
+            Tag = 0
+            Nodes = <>
+          end
+          item
+            Values = <
+              item
+                Text = 'Isabella Gonzales'
+              end
+              item
+                Text = 'Marketing'
+              end
+              item
+                Text = 'Office'
+              end>
+            Tag = 0
+            Nodes = <>
+          end>
+      end
+      item
+        Values = <
+          item
+            Text = 'Specialists'
+          end>
+        Expanded = True
+        Tag = 0
+        Nodes = <
+          item
+            Values = <
+              item
+                Text = 'Marie Andersson'
+              end
+              item
+                Text = 'Marketing'
+              end
+              item
+                Text = 'Abroad'
+              end>
+            Tag = 0
+            Nodes = <>
+          end
+          item
+            Values = <
+              item
+                Text = 'Arthur Peeters'
+              end
+              item
+                Text = 'Marketing'
+              end
+              item
+                Text = 'Abroad'
+              end>
+            Tag = 0
+            Nodes = <>
+          end>
+      end
+      item
+        Values = <
+          item
+            Text = 'Assistants'
+          end>
+        Tag = 0
+        Nodes = <
+          item
+            Values = <
+              item
+                Text = 'Liam Smith'
+              end
+              item
+                Text = 'HR'
+              end
+              item
+                Text = 'Abroad'
+              end>
+            Tag = 0
+            Nodes = <>
+          end
+          item
+            Values = <
+              item
+                Text = 'Arthur Smith'
+              end
+              item
+                Text = 'Marketing'
+              end
+              item
+                Text = 'Office'
+              end>
+            Tag = 0
+            Nodes = <>
+          end
+          item
+            Values = <
+              item
+                Text = 'Isabella Ali'
+              end
+              item
+                Text = 'HR'
+              end
+              item
+                Text = 'Office'
+              end>
+            Tag = 0
+            Nodes = <>
+          end>
+      end>
+    ColumnsAppearance.StretchColumn = 0
+    ColumnsAppearance.StretchAll = False
+    ColumnsAppearance.TopSize = 36.000000000000000000
+    ColumnsAppearance.BottomSize = 25.000000000000000000
+    ColumnsAppearance.TopFont.Size = 14.000000000000000000
+    ColumnsAppearance.TopFont.Color = xFF454545
+    ColumnsAppearance.TopFont.Name = 'Segoe UI'
+    ColumnsAppearance.TopFont.StyleExt = {00070000000000000004000000}
+    ColumnsAppearance.BottomFont.Color = xFF454545
+    ColumnsAppearance.BottomFont.Name = 'Segoe UI'
+    ColumnsAppearance.TopFill.Color = xFFEEF2F9
+    ColumnsAppearance.BottomFill.Kind = gfkNone
+    ColumnsAppearance.BottomFill.Color = xFFEEF2F9
+    ColumnsAppearance.TopStroke.Kind = gskNone
+    NodesAppearance.ShowFocus = False
+    NodesAppearance.ExpandWidth = 18.000000000000000000
+    NodesAppearance.ExpandHeight = 18.000000000000000000
+    NodesAppearance.LevelIndent = 20.000000000000000000
+    NodesAppearance.FixedHeight = 25.000000000000000000
+    NodesAppearance.VariableMinimumHeight = 25.000000000000000000
+    NodesAppearance.Font.Color = xFF7A7A7A
+    NodesAppearance.Font.Name = 'Segoe UI'
+    NodesAppearance.TitleFont.Name = 'Segoe UI'
+    NodesAppearance.SelectedFontColor = xFF454545
+    NodesAppearance.ExtendedFontColor = xFF454545
+    NodesAppearance.SelectedFill.Color = xFFF6F8FC
+    NodesAppearance.SelectedStroke.Color = xFF2D9BEF
+    NodesAppearance.SelectedStroke.Width = 2.000000000000000000
+    NodesAppearance.ExtendedFont.Name = 'Segoe UI'
+    NodesAppearance.ExpandNodeIcon.PNG = {
+      89504E470D0A1A0A0000000D494844520000000B0000000B0806000000A9AC77
+      26000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+      004B49444154285363ACAEADFECF402C0029260680D43141F5A0006F3F6F280B
+      1560558C0B90A498054A63588DCCDFBA692B98862B860980004821321F0668E7
+      66AC8AB1390104488841060600EED939BB858B0ECD0000000049454E44AE4260
+      82}
+    NodesAppearance.CollapseNodeIcon.PNG = {
+      89504E470D0A1A0A0000000D494844520000000B0000000B0806000000A9AC77
+      26000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+      003A49444154285363ACAEADFECF402C0029260680D43141F5100568A798054A
+      8381B79F379485005B376D85B2D014234B600383C48324C420030300D49232D7
+      2010A6750000000049454E44AE426082}
+    NodesAppearance.ExpandNodeIconLarge.PNG = {
+      89504E470D0A1A0A0000000D4948445200000016000000160806000000C4B46C
+      3B000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+      006849444154484B63ACAEADFECF4003C004A5A90EE02E6E696A010B500A6AEA
+      6AC034CD5C4CB4C1DE7EDE604C2C187817930A460D860316280D0784621E97FC
+      D64D5BA12C08A09F8BD16D8601984B71C9A383D1540107C3D860506A20364580
+      00CD5C3CD4EA3C060600D2401984154F98460000000049454E44AE426082}
+    NodesAppearance.CollapseNodeIconLarge.PNG = {
+      89504E470D0A1A0A0000000D4948445200000016000000160806000000C4B46C
+      3B000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+      005149444154484B63ACAEADFECF4003C004A5A90EE02E6E696A010B500A6AEA
+      6AC034CD5C3C6A301C8C1A0C072C501A0378FB794359F8C1D64D5BA12C544033
+      178FE63C381835180E869EC143ADCE636000009C2E12F3AF5420C80000000049
+      454E44AE426082}
+    GlobalFont.Name = 'Segoe UI'
+    GlobalFont.Scale = 1.000000000000000000
+    GlobalFont.Style = []
+    OnAfterUnCheckNode = tvCategoriesAfterUnCheckNode
+    OnAfterCheckNode = tvCategoriesAfterCheckNode
+    DefaultViewJSONOptions.NameHTMLTemplate = '<#NAME>'
+    DefaultViewJSONOptions.ValueHTMLTemplate = '<#VALUE>'
+  end
+  object Grid: TTMSFNCGrid
+    Color = claSeashell
+    Align = Client
+    Margins.Left = 4.000000000000000000
+    Margins.Top = 4.000000000000000000
+    Margins.Right = 4.000000000000000000
+    Margins.Bottom = 4.000000000000000000
+    Size.Width = 747.000000000000000000
+    Size.Height = 412.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 7
+    DefaultRowHeight = 40.000000000000000000
+    FixedColumns = 0
+    ColumnCount = 7
+    Options.Bands.Enabled = True
+    Options.Editing.CalcFormat = '%g'
+    Options.Grouping.CalcFormat = '%g'
+    Options.Grouping.GroupCountFormat = '(%d)'
+    Options.IO.XMLEncoding = 'ISO-8859-1'
+    Options.Mouse.ColumnSizing = True
+    Options.Mouse.ClickMargin = 0
+    Options.Mouse.ColumnSizeMargin = 6
+    Options.Mouse.RowSizeMargin = 6
+    Options.Mouse.FixedColumnSizing = True
+    Options.Selection.Mode = smSingleRow
+    Adapter = gdaExpenses
+    Columns = <
+      item
+        BorderWidth = 1
+        FixedFont.Name = 'Segoe UI'
+        FixedFont.StyleExt = {00070000000000000004000000}
+        Font.Name = 'Segoe UI'
+        ID = ''
+        Width = 70.000000000000000000
+      end
+      item
+        BorderWidth = 1
+        FixedFont.Name = 'Segoe UI'
+        FixedFont.StyleExt = {00070000000000000004000000}
+        Font.Name = 'Segoe UI'
+        ID = ''
+        Width = 250.000000000000000000
+      end
+      item
+        BorderWidth = 1
+        FixedFont.Name = 'Segoe UI'
+        FixedFont.StyleExt = {00070000000000000004000000}
+        Font.Name = 'Segoe UI'
+        ID = ''
+        Width = 100.000000000000000000
+      end
+      item
+        BorderWidth = 1
+        FixedFont.Name = 'Segoe UI'
+        FixedFont.StyleExt = {00070000000000000004000000}
+        Font.Name = 'Segoe UI'
+        ID = ''
+        Width = 100.000000000000000000
+      end
+      item
+        BorderWidth = 1
+        FixedFont.Name = 'Segoe UI'
+        FixedFont.StyleExt = {00070000000000000004000000}
+        Font.Name = 'Segoe UI'
+        ID = ''
+        Width = 90.000000000000000000
+      end
+      item
+        BorderWidth = 1
+        FixedFont.Name = 'Segoe UI'
+        FixedFont.StyleExt = {00070000000000000004000000}
+        Font.Name = 'Segoe UI'
+        ID = ''
+        Width = 68.000000000000000000
+      end
+      item
+        BorderWidth = 1
+        FixedFont.Name = 'Segoe UI'
+        FixedFont.StyleExt = {00070000000000000004000000}
+        Font.Name = 'Segoe UI'
+        ID = ''
+        Width = 68.000000000000000000
+      end>
+    Fill.Color = claSeashell
+    DefaultFont.Name = 'Segoe UI'
+    TopRow = 1
+    Appearance.FixedLayout.Fill.Color = xFFEEF2F9
+    Appearance.FixedLayout.Font.Size = 14.000000000000000000
+    Appearance.FixedLayout.Font.Color = xFF454545
+    Appearance.FixedLayout.Font.Name = 'Segoe UI'
+    Appearance.FixedLayout.Font.StyleExt = {00070000000000000004000000}
+    Appearance.NormalLayout.Fill.Color = xFFF6F8FC
+    Appearance.NormalLayout.Font.Color = xFF7A7A7A
+    Appearance.NormalLayout.Font.Name = 'Segoe UI'
+    Appearance.GroupLayout.Fill.Color = xFF6E93C3
+    Appearance.GroupLayout.Font.Color = claWhite
+    Appearance.GroupLayout.Font.Name = 'Segoe UI'
+    Appearance.SummaryLayout.Fill.Color = xFFB9C5D5
+    Appearance.SummaryLayout.Font.Name = 'Segoe UI'
+    Appearance.SelectedLayout.Fill.Color = xFFBBDEFA
+    Appearance.SelectedLayout.Font.Color = xFF454545
+    Appearance.SelectedLayout.Font.Name = 'Segoe UI'
+    Appearance.FocusedLayout.Fill.Color = xFF74BDF4
+    Appearance.FocusedLayout.Font.Color = xFF454545
+    Appearance.FocusedLayout.Font.Name = 'Segoe UI'
+    Appearance.FixedSelectedLayout.Fill.Color = claLightsteelblue
+    Appearance.FixedSelectedLayout.Font.Name = 'Segoe UI'
+    Appearance.BandLayout.Fill.Color = xFFFFFFFE
+    Appearance.BandLayout.Font.Color = xFF7A7A7A
+    Appearance.BandLayout.Font.Name = 'Segoe UI'
+    Appearance.ProgressLayout.Format = '%.0f%%'
+    LeftCol = 0
+    ScrollMode = scmItemScrolling
+    CustomScrollBars = True
+    GlobalFont.Scale = 1.000000000000000000
+    GlobalFont.Style = []
+    DesignTimeSampleData = True
+    object gdaExpenses: TTMSFNCGridDatabaseAdapter
+      Size.Width = 26.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      Position.X = 360.000000000000000000
+      Position.Y = 88.000000000000000000
+      Grid = Grid
+      DataSource = dsExpenses
+      Columns = <
+        item
+          FieldName = 'ID'
+          Header = 'ID'
+          CheckFalse = 'False'
+          CheckTrue = 'True'
+        end
+        item
+          FieldName = 'Date'
+          Header = 'Date'
+          CheckFalse = 'False'
+          CheckTrue = 'True'
+        end
+        item
+          FieldName = 'Amount'
+          Header = 'Amount'
+          CheckFalse = 'False'
+          CheckTrue = 'True'
+        end
+        item
+          FieldName = 'ProductId.Name'
+          Header = 'Product'
+          CheckFalse = 'False'
+          CheckTrue = 'True'
+        end
+        item
+          FieldName = 'ProductId.CategoryId.Name'
+          Header = 'Category'
+          CheckFalse = 'False'
+          CheckTrue = 'True'
+        end
+        item
+          FieldName = 'StoreId.Name'
+          Header = 'Store'
+          CheckFalse = 'False'
+          CheckTrue = 'True'
+        end>
+      AutoCreateColumns = False
+      AutoRemoveColumns = False
+    end
+  end
+  object TMSFNCSplitter1: TTMSFNCSplitter
+    Align = Left
+    Position.X = 201.000000000000000000
+    Position.Y = 165.000000000000000000
+    Size.Width = 10.000000000000000000
+    Size.Height = 420.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    MinSize = 20.000000000000000000
+  end
+  object dsExpenses: TDataSource
+    DataSet = DM.adExpenses
+    Left = 445
+    Top = 289
+  end
+  object SaveDialog1: TSaveDialog
+    Left = 536
+    Top = 154
+  end
+end

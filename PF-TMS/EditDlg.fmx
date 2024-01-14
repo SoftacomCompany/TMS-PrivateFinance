@@ -1,0 +1,204 @@
+object EditDialog: TEditDialog
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu]
+  BorderStyle = Single
+  Caption = 'Expenses'
+  ClientHeight = 311
+  ClientWidth = 394
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object btnOk: TTMSFNCButton
+    Font.Name = 'Segoe UI'
+    Default = True
+    Size.Width = 100.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    ModalResult = 1
+    Position.X = 120.000000000000000000
+    Position.Y = 256.000000000000000000
+    TabOrder = 1
+    Text = 'OK'
+  end
+  object btnCancel: TTMSFNCButton
+    Font.Name = 'Segoe UI'
+    Cancel = True
+    Size.Width = 100.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    ModalResult = 2
+    Position.X = 248.000000000000000000
+    Position.Y = 256.000000000000000000
+    TabOrder = 0
+    Text = 'Cancel'
+  end
+  object lbCategory: TLabel
+    Position.X = 32.000000000000000000
+    Position.Y = 32.000000000000000000
+    Size.Width = 96.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Category:'
+    TabOrder = 5
+  end
+  object cbCategories: TComboBox
+    Position.X = 136.000000000000000000
+    Position.Y = 32.000000000000000000
+    Size.Width = 142.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 8
+    OnChange = cbCategoriesChange
+  end
+  object lbStore: TLabel
+    Position.X = 32.000000000000000000
+    Position.Y = 72.000000000000000000
+    Size.Width = 96.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Store:'
+    TabOrder = 4
+  end
+  object cbStores: TComboBox
+    Position.X = 136.000000000000000000
+    Position.Y = 72.000000000000000000
+    Size.Width = 142.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 7
+  end
+  object lbProduct: TLabel
+    Position.X = 32.000000000000000000
+    Position.Y = 110.000000000000000000
+    Size.Width = 96.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Product:'
+    TabOrder = 3
+  end
+  object cbProducts: TComboBox
+    Position.X = 136.000000000000000000
+    Position.Y = 110.000000000000000000
+    Size.Width = 142.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 6
+    OnChange = ControlChange
+  end
+  object lbAmount: TLabel
+    Position.X = 32.000000000000000000
+    Position.Y = 155.000000000000000000
+    Size.Width = 96.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Amount:'
+    TabOrder = 2
+  end
+  object edAmount: TTMSFNCEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 17
+    Position.X = 136.000000000000000000
+    Position.Y = 150.000000000000000000
+    Size.Width = 142.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TextPrompt = 'Enter product cost'
+    OnChange = ControlChange
+    Text = ''
+    EditType = etFloat
+    Lookup.Separator = ';'
+    AllowNumericNullValue = True
+    Precision = 2
+  end
+  object adCategories: TAureliusDataset
+    FieldDefs = <>
+    Left = 24
+    Top = 232
+    object adCategoriesId: TIntegerField
+      FieldName = 'Id'
+    end
+    object adCategoriesName: TStringField
+      FieldName = 'Name'
+      Size = 255
+    end
+  end
+  object bsCategories: TBindSourceDB
+    DataSet = adCategories
+    ScopeMappings = <>
+    Left = 80
+    Top = 184
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 212
+    Top = 181
+    object LinkListControlToField1: TLinkListControlToField
+      Category = 'Quick Bindings'
+      DataSource = bsCategories
+      FieldName = 'Name'
+      Control = cbCategories
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+    object LinkListControlToField2: TLinkListControlToField
+      Category = 'Quick Bindings'
+      DataSource = bsStores
+      FieldName = 'Name'
+      Control = cbStores
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+    object LinkProducts: TLinkListControlToField
+      Category = 'Quick Bindings'
+      DataSource = bsProducts
+      FieldName = 'Name'
+      Control = cbProducts
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+  end
+  object adStores: TAureliusDataset
+    FieldDefs = <>
+    Left = 80
+    Top = 232
+    object adStoresId: TIntegerField
+      FieldName = 'Id'
+    end
+    object adStoresName: TStringField
+      FieldName = 'Name'
+      Size = 255
+    end
+  end
+  object bsStores: TBindSourceDB
+    DataSet = adStores
+    ScopeMappings = <>
+    Left = 32
+    Top = 184
+  end
+  object adProducts: TAureliusDataset
+    FieldDefs = <>
+    Left = 144
+    Top = 232
+    object adProductsId: TIntegerField
+      FieldName = 'Id'
+    end
+    object adProductsName: TStringField
+      FieldName = 'Name'
+      Size = 255
+    end
+  end
+  object bsProducts: TBindSourceDB
+    DataSet = adProducts
+    ScopeMappings = <>
+    Left = 144
+    Top = 184
+  end
+end
