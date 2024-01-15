@@ -11,7 +11,8 @@ uses
   FMX.TMSFNCCustomScrollControl, FMX.TMSFNCGridData, FMX.TMSFNCCustomGrid, FMX.TMSFNCGrid, Data.DB,
   Aurelius.Bind.BaseDataset, Aurelius.Bind.Dataset, FMX.TMSFNCCustomComponent, FMX.TMSFNCGridDatabaseAdapter, dmData,
   DBScheme, System.Generics.Collections, FMX.TMSFNCSplitter, FMX.TMSFNCCustomPicker, FMX.TMSFNCDatePicker, EditDlg,
-  System.IOUtils;
+  System.IOUtils, FMX.TMSFNCBitmapContainer,
+  FMX.TMSFNCPDFLib, FMX.TMSFNCPDFCoreLibBase, FMX.TMSFNCGridExcelIO, FMX.TMSFNCPDFIO, FMX.TMSFNCGridPDFIO;
 
 type
   TMainForm = class(TTMSFNCRibbonForm)
@@ -36,7 +37,7 @@ type
     btnAdd: TTMSFNCRibbonDefaultToolBarButton;
     btnEdit: TTMSFNCRibbonDefaultToolBarButton;
     TMSFNCRibbonToolBarSeparator1: TTMSFNCRibbonToolBarSeparator;
-    TMSFNCRibbonDefaultToolBarButton1: TTMSFNCRibbonDefaultToolBarButton;
+    btnDelete: TTMSFNCRibbonDefaultToolBarButton;
     tvCategories: TTMSFNCTreeView;
     Grid: TTMSFNCGrid;
     gdaExpenses: TTMSFNCGridDatabaseAdapter;
@@ -48,14 +49,18 @@ type
     dtTo: TTMSFNCDatePicker;
     TMSFNCRibbonToolBarSeparator2: TTMSFNCRibbonToolBarSeparator;
     btnHTMLReport: TTMSFNCRibbonDefaultToolBarButton;
-    btnReportExcel: TTMSFNCRibbonDefaultToolBarButton;
+    btnReportPdf: TTMSFNCRibbonDefaultToolBarButton;
     SaveDialog1: TSaveDialog;
+    TMSFNCBitmapContainer1: TTMSFNCBitmapContainer;
+    PDFIO: TTMSFNCGridPDFIO;
     procedure FormCreate(Sender: TObject);
     procedure tvCategoriesAfterCheckNode(Sender: TObject; ANode: TTMSFNCTreeViewVirtualNode; AColumn: Integer);
     procedure tvCategoriesAfterUnCheckNode(Sender: TObject; ANode: TTMSFNCTreeViewVirtualNode; AColumn: Integer);
     procedure DateFilterSelected(Sender: TObject; ADate: TDate);
     procedure btnModifyClick(Sender: TObject);
     procedure btnHTMLReportClick(Sender: TObject);
+    procedure btnReportPdfClick(Sender: TObject);
+    procedure btnDeleteClick(Sender: TObject);
   private
     procedure BuildTree;
     procedure BuildToolbars;
@@ -105,6 +110,24 @@ begin
       Dm.adExpenses.Post
     else
       Dm.adExpenses.Cancel;
+  finally
+    Dlg.Free;
+  end;
+end;
+
+procedure TMainForm.btnReportPdfClick(Sender: TObject);
+begin
+  var Dlg := TSaveDialog.Create(Self);
+  try
+    Dlg.Title := 'Export to PDF';
+    Dlg.Filter := 'PDF files (*.pdf)|*.pdf|Any files (*.*)|*.*';
+    if Dlg.Execute then
+    begin
+      var FileName := Dlg.FileName;
+      if not TPath.HasExtension(FileName) then
+        FileName := FileName + '.pdf';
+      PDFIO.Save(FileName);
+    end;
   finally
     Dlg.Free;
   end;
@@ -195,6 +218,13 @@ begin
   BuildToolbars;
   BuildTree;
   gdaExpenses.Active := True;
+end;
+
+procedure TMainForm.btnDeleteClick(Sender: TObject);
+var
+  Dlg: TEditDialog;
+begin
+    Dm.adExpenses.Delete;
 end;
 
 procedure TMainForm.tvCategoriesAfterCheckNode(Sender: TObject; ANode: TTMSFNCTreeViewVirtualNode; AColumn: Integer);

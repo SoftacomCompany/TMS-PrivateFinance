@@ -52,9 +52,6 @@ Coordinates=227,240,49,33
 [TMSFNCRibbon1PageControlContainer]
 Coordinates=10,240,207,33
 
-[TMSFNCRibbonDefaultToolBarButton1]
-Coordinates=575,197,205,33
-
 [TMSFNCRibbon1Wrapper]
 Coordinates=425,197,140,33
 
@@ -114,4 +111,7 @@ Coordinates=323,125,133,105
 
 [EditDialog.bsStores]
 Coordinates=323,1,112,105
+
+[btnDelete]
+Coordinates=575,197,205,33
 

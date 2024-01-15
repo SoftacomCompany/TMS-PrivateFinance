@@ -10,6 +10,7 @@ Visible=True
 
 [BindingsList1]
 Coordinates=365,1,91,36
+Visible=True
 
 [adCategories]
 Coordinates=10,10,91,36
