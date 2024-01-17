@@ -113,17 +113,16 @@ procedure TDM.DataModuleCreate(Sender: TObject);
 var
   Allocator: IMalloc;
   SpecialDir: PItemIdList;
-  FBuf: array[0..MAX_PATH] of Char;
-
+  Buf: array[0..MAX_PATH] of Char;
   Field: TField;
-  i: Integer;
+  I: Integer;
 begin
   if SHGetMalloc(Allocator) = NOERROR then
   begin
     SHGetSpecialFolderLocation(0, CSIDL_PERSONAL, SpecialDir);
-    SHGetPathFromIDList(SpecialDir, @FBuf[0]);
+    SHGetPathFromIDList(SpecialDir, @Buf[0]);
     Allocator.Free(SpecialDir);
-    FDBPath := IncludeTrailingPathDelimiter(string(FBuf)) + 'PersonalFinance\';
+    FDBPath := IncludeTrailingPathDelimiter(string(Buf)) + 'PersonalFinance\';
     ForceDirectories(FDBPath);
   end
   else
@@ -131,21 +130,16 @@ begin
     ShowMessage('Can not access Documents folder');
     Halt(1);
   end;
-
   FVisibleCategories := TBucketList.Create;
-
   TableCategories.DatabaseName := FDBPath;
   TableExpenses.DatabaseName := FDBPath;
   TableStores.DatabaseName := FDBPath;
   TableProducts.DatabaseName := FDBPath;
   if not FileExists(FDBPath + 'Categories.db') then
     CreateTables;
-
   TableExpenses.FieldDefs.Update;
-  for i := 0 to TableExpenses.FieldDefs.Count-1 do
-  begin
+  for I := 0 to TableExpenses.FieldDefs.Count-1 do
     TableExpenses.FieldDefs[I].CreateField(TableExpenses);
-  end;
 
   Field := TStringField.Create(TableExpenses.Owner);
   Field.FieldName := 'Product_name';
@@ -189,7 +183,6 @@ begin
   Field.LookupResultField := 'Name';
   TableExpenses.FieldByName('StoreID').Visible := False;
 
-
   TableCategories.Active := True;
   TableStores.Active := True;
   TableProducts.Active := True;
@@ -213,28 +206,32 @@ var
 begin
   TableCategories.Active := True;
   OwnerID := Add(0, 'Products');
-    Add(OwnerID, 'Basic');
-    Add(OwnerID, 'Alcohol');
-    Add(OwnerID, 'Delicacies');
+  // Add Product categories
+  Add(OwnerID, 'Basic');
+  Add(OwnerID, 'Alcohol');
+  Add(OwnerID, 'Delicacies');
   OwnerID := Add(0, 'Manufactured goods');
-    Add(OwnerID, 'Household chemicals');
-    Add(OwnerID, 'Textile');
-    Add(OwnerID, 'Miscellaneous');
+  // Add Manufactured goods categories
+  Add(OwnerID, 'Household chemicals');
+  Add(OwnerID, 'Textile');
+  Add(OwnerID, 'Miscellaneous');
   OwnerID := Add(0, 'Entertainment');
-    Add(OwnerID, 'Movie');
-    Add(OwnerID, 'Clubs');
-    Add(OwnerID, 'Restaurants');
-    Add(OwnerID, 'Just');
+  // Add Entertainment categories
+  Add(OwnerID, 'Movie');
+  Add(OwnerID, 'Clubs');
+  Add(OwnerID, 'Restaurants');
+  Add(OwnerID, 'Just');
   OwnerID := Add(0, 'House');
-    Add(OwnerID, 'Bills');
-    Add(OwnerID, 'Loans');
-    Add(OwnerID, 'Automobile');
-  Add(0, 'Other');
+  // Add House categories
+  Add(OwnerID, 'Bills');
+  Add(OwnerID, 'Loans');
+  Add(OwnerID, 'Automobile');
+  Add(0, 'Other'); // Add category Other
 end;
 
 procedure TDM.FillExpenses;
 const
-  cExpenses: array[0..3] of record
+  EXPENSES: array[0..3] of record
     StoreID: Integer;
     ProductID: Integer;
     Amount: Double;
@@ -245,17 +242,17 @@ const
     (StoreID: 0; ProductID: 5; Amount: 100.22)
   );
 var
-  i: Integer;
+  I: Integer;
 begin
   TableExpenses.Active := True;
-  for i := Low(cExpenses) to High(cExpenses) do
+  for i := Low(EXPENSES) to High(EXPENSES) do
     with TableExpenses do
     begin
       Append;
-      if cExpenses[i].StoreID > 0 then
-        FieldByName('StoreID').AsInteger := cExpenses[i].StoreID;
-      FieldByName('ProductID').AsInteger := cExpenses[i].ProductID;
-      FieldByName('Amount').AsFloat := cExpenses[i].Amount;
+      if EXPENSES[I].StoreID > 0 then
+        FieldByName('StoreID').AsInteger := EXPENSES[I].StoreID;
+      FieldByName('ProductID').AsInteger := EXPENSES[I].ProductID;
+      FieldByName('Amount').AsFloat := EXPENSES[I].Amount;
       FieldByName('Date').AsDateTime := Date - Random(10);
       Post;
     end;
@@ -263,7 +260,7 @@ end;
 
 procedure TDM.FillProducts;
 const
-  cProducts: array[0..4] of record
+  PRODUCTS: array[0..4] of record
     CategoryID: Integer;
     Name: string;
   end = (
@@ -274,31 +271,31 @@ const
     (CategoryID: 12; Name: 'Girls')
   );
 var
-  i: Integer;
+  I: Integer;
 begin
   TableProducts.Active := True;
-  for i := Low(cProducts) to High(cProducts) do
+  for I := Low(PRODUCTS) to High(PRODUCTS) do
     with TableProducts do
     begin
       Append;
-      FieldByName('CategoryID').AsInteger := cProducts[i].CategoryID;
-      FieldByName('Name').AsString := cProducts[i].Name;
+      FieldByName('CategoryID').AsInteger := PRODUCTS[I].CategoryID;
+      FieldByName('Name').AsString := PRODUCTS[I].Name;
       Post;
     end;
 end;
 
 procedure TDM.FillStores;
 const
-  cStores: array[0..1] of string = ('Walmart', 'Ikea');
+  STORES: array[0..1] of string = ('Walmart', 'Ikea');
 var
-  i: Integer;
+  I: Integer;
 begin
   TableStores.Active := True;
-  for i := Low(cStores) to High(cStores) do
+  for I := Low(STORES) to High(STORES) do
     with TableStores do
     begin
       Append;
-      FieldByName('Name').AsString := cStores[i];
+      FieldByName('Name').AsString := STORES[I];
       Post;
     end;
 end;

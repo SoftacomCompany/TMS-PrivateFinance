@@ -84,6 +84,7 @@ end;
 procedure TDM.DataModuleDestroy(Sender: TObject);
 begin
   FreeAndNil(FVisibleCategories);
+  FreeAndNil(FManager);
 end;
 
 procedure TDM.FillCategories;
@@ -108,28 +109,32 @@ var
   Owner: TCategory;
 begin
   Owner := Add(nil, 'Products');
-    Add(Owner, 'Basic');
-    Add(Owner, 'Alcohol');
-    Add(Owner, 'Delicacies');
+  // Add Product categories
+  Add(Owner, 'Basic');
+  Add(Owner, 'Alcohol');
+  Add(Owner, 'Delicacies');
   Owner := Add(nil, 'Manufactured goods');
-    Add(Owner, 'Household chemicals');
-    Add(Owner, 'Textile');
-    Add(Owner, 'Miscellaneous');
+  // Add Manufactured goods categories
+  Add(Owner, 'Household chemicals');
+  Add(Owner, 'Textile');
+  Add(Owner, 'Miscellaneous');
   Owner := Add(nil, 'Entertainment');
-    Add(Owner, 'Movie');
-    Add(Owner, 'Clubs');
-    Add(Owner, 'Restaurants');
-    Add(Owner, 'Just');
+  // Add Entertainment categories
+  Add(Owner, 'Movie');
+  Add(Owner, 'Clubs');
+  Add(Owner, 'Restaurants');
+  Add(Owner, 'Just');
   Owner := Add(nil, 'House');
-    Add(Owner, 'Bills');
-    Add(Owner, 'Loans');
-    Add(Owner, 'Automobile');
-  Add(nil, 'Other');
+  // Add House categories
+  Add(Owner, 'Bills');
+  Add(Owner, 'Loans');
+  Add(Owner, 'Automobile');
+  Add(nil, 'Other'); // Add category Other
 end;
 
 procedure TDM.FillExpenses;
 const
-  cExpenses: array[0..3] of record
+  EXPENSES: array[0..3] of record
     StoreID: Integer;
     ProductID: Integer;
     Amount: Double;
@@ -140,14 +145,14 @@ const
     (StoreID: 0; ProductID: 5; Amount: 100.22)
   );
 begin
-  for var i := Low(cExpenses) to High(cExpenses) do
+  for var I := Low(EXPENSES) to High(EXPENSES) do
   begin
     var Expense := TExpense.Create;
     try
-      if cExpenses[i].StoreID > 0 then
-        Expense.StoreId := Manager.Find<TStore>(cExpenses[i].StoreID);
-      Expense.ProductId := Manager.Find<TProduct>(cExpenses[i].ProductID);
-      Expense.Amount := cExpenses[i].Amount;
+      if EXPENSES[I].StoreID > 0 then
+        Expense.StoreId := Manager.Find<TStore>(EXPENSES[I].StoreID);
+      Expense.ProductId := Manager.Find<TProduct>(EXPENSES[I].ProductID);
+      Expense.Amount := EXPENSES[i].Amount;
       Expense.Date := Date - Random(10);
       FManager.Save(Expense);
     except
@@ -160,7 +165,7 @@ end;
 
 procedure TDM.FillProducts;
 const
-  cProducts: array[0..4] of record
+  PRODUCTS: array[0..4] of record
     CategoryID: Integer;
     Name: string;
   end = (
@@ -171,12 +176,12 @@ const
     (CategoryID: 12; Name: 'Girls')
   );
 begin
-  for var i := Low(cProducts) to High(cProducts) do
+  for var I := Low(PRODUCTS) to High(PRODUCTS) do
   begin
     var Product := TProduct.Create;
     try
-      Product.CategoryId := Manager.Find<TCategory>(cProducts[i].CategoryID);
-      Product.Name := cProducts[i].Name;
+      Product.CategoryId := Manager.Find<TCategory>(PRODUCTS[I].CategoryID);
+      Product.Name := PRODUCTS[I].Name;
       FManager.Save(Product);
     except
       if not FManager.IsAttached(Product) then
@@ -188,13 +193,13 @@ end;
 
 procedure TDM.FillStores;
 const
-  cStores: array[0..1] of string = ('Walmart', 'Ikea');
+  STORES: array[0..1] of string = ('Walmart', 'Ikea');
 begin
-  for var i := Low(cStores) to High(cStores) do
+  for var I := Low(STORES) to High(STORES) do
   begin
     var Store := TStore.Create;
     try
-      Store.Name := cStores[i];
+      Store.Name := STORES[I];
       FManager.Save(Store);
     except
       if not FManager.IsAttached(Store) then
@@ -230,8 +235,6 @@ begin
   finally
     adExpenses.EnableControls;
   end;
-
-
 end;
 
 end.

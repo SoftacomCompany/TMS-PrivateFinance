@@ -11,7 +11,7 @@ uses
   FMX.TMSFNCCustomScrollControl, FMX.TMSFNCGridData, FMX.TMSFNCCustomGrid, FMX.TMSFNCGrid, Data.DB,
   Aurelius.Bind.BaseDataset, Aurelius.Bind.Dataset, FMX.TMSFNCCustomComponent, FMX.TMSFNCGridDatabaseAdapter, dmData,
   DBScheme, System.Generics.Collections, FMX.TMSFNCSplitter, FMX.TMSFNCCustomPicker, FMX.TMSFNCDatePicker, EditDlg,
-  System.IOUtils, FMX.TMSFNCBitmapContainer,
+  System.IOUtils, FMX.TMSFNCBitmapContainer, System.Threading,
   FMX.TMSFNCPDFLib, FMX.TMSFNCPDFCoreLibBase, FMX.TMSFNCGridExcelIO, FMX.TMSFNCPDFIO, FMX.TMSFNCGridPDFIO;
 
 type
@@ -62,6 +62,8 @@ type
     procedure btnReportPdfClick(Sender: TObject);
     procedure btnDeleteClick(Sender: TObject);
   private
+    type TCloseMessage = type of Integer;
+  private
     procedure BuildTree;
     procedure BuildToolbars;
     procedure CheckNode(ANode: TTMSFNCTreeViewNode; AChecked: Boolean);
@@ -99,9 +101,7 @@ var
   Dlg: TEditDialog;
 begin
   if Sender = btnAdd then
-  begin
-    Dm.adExpenses.Append;
-  end
+    Dm.adExpenses.Append
   else
     Dm.adExpenses.Edit;
   Dlg := TEditDialog.Create(Self);
@@ -210,7 +210,8 @@ end;
 
 procedure TMainForm.DoExitClick(Sender: TObject);
 begin
-  Application.Terminate;
+  RibbonButtonFile.CloseDropDown;
+  Close;
 end;
 
 procedure TMainForm.FormCreate(Sender: TObject);
@@ -221,10 +222,8 @@ begin
 end;
 
 procedure TMainForm.btnDeleteClick(Sender: TObject);
-var
-  Dlg: TEditDialog;
 begin
-    Dm.adExpenses.Delete;
+  Dm.adExpenses.Delete;
 end;
 
 procedure TMainForm.tvCategoriesAfterCheckNode(Sender: TObject; ANode: TTMSFNCTreeViewVirtualNode; AColumn: Integer);

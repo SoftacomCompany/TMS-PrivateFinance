@@ -99,7 +99,7 @@ end;
 
 procedure TMainForm.FormCreate(Sender: TObject);
 const
-  TVS_CHECKBOXES          = $0100;
+  TVS_CHECKBOXES = $0100;
 begin
   SetWindowLong(tvCategories.Handle, GWL_STYLE, GetWindowLong(tvCategories.Handle, GWL_STYLE) or TVS_CHECKBOXES);
   BuildTree;
@@ -111,35 +111,36 @@ var
   NodeParent, Node: TTreeNode;
   Checked: Boolean;
 begin
-    Node := tvCategories.GetNodeAt(X, Y);
-    if (Node <> nil) and  (tvCategories.GetHitTestInfoAt(X, Y) = [htOnItem, htOnStateIcon]) then
+  Node := tvCategories.GetNodeAt(X, Y);
+  if (Node <> nil) and  (tvCategories.GetHitTestInfoAt(X, Y) = [htOnItem, htOnStateIcon]) then
+  begin
+    SetChecked(Node, GetChecked(Node));
+    CheckSubNode(Node);
+  end;
+  if Node.Parent<>nil then
+  begin
+    NodeParent := Node.Parent;
+    Node := NodeParent.getFirstChild;
+    Checked := False;
+    while Assigned(Node) do
     begin
-      SetChecked(Node, GetChecked(Node));
-      CheckSubNode(Node);
-    end;
-    if Node.Parent<>nil then
-    begin
-      NodeParent := Node.Parent;
-      Node := NodeParent.getFirstChild;
-      Checked := False;
-      while Assigned(Node) do
+      if GetChecked(Node) then
       begin
-        if GetChecked(Node) then
-          Checked := True;
-        Node := NodeParent.GetNextChild(Node);
+        Checked := True;
+        Break;
       end;
-      if not Checked then
-        SetChecked(NodeParent, false)
-      else
-        SetChecked(NodeParent, true);
+      Node := NodeParent.GetNextChild(Node);
     end;
+    SetChecked(NodeParent, Checked)
+  end;
 end;
 
 procedure TMainForm.CheckSubNode(Node: TTreeNode);
 var
   flag: boolean;
 begin
-  if not Node.HasChildren then Exit;
+  if not Node.HasChildren then
+    Exit;
   flag := GetChecked(Node);
   Node := Node.getFirstChild;
   while Assigned(Node) do
@@ -167,13 +168,13 @@ begin
   FillChar(Item, SizeOf(TTVItem), 0);
   with Item do
   begin
-    hItem     := Node.ItemId;
-    Mask      := TVIF_STATE;
+    hItem := Node.ItemId;
+    Mask := TVIF_STATE;
     StateMask := TVIS_STATEIMAGEMASK;
     if Checked then
-      Item.State :=TVIS_CHECKED
+      Item.State := TVIS_CHECKED
     else
-      Item.State :=TVIS_CHECKED shr 1;
+      Item.State := TVIS_CHECKED shr 1;
     TreeView_SetItem(Node.TreeView.Handle, Item);
   end;
   if Checked then
