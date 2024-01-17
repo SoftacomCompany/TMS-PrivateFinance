@@ -231,7 +231,7 @@ end;
 
 procedure TDM.FillExpenses;
 const
-  EXPENSES: array[0..3] of record
+  CExpenses: array[0..3] of record
     StoreID: Integer;
     ProductID: Integer;
     Amount: Double;
@@ -245,14 +245,14 @@ var
   I: Integer;
 begin
   TableExpenses.Active := True;
-  for i := Low(EXPENSES) to High(EXPENSES) do
+  for i := Low(CExpenses) to High(CExpenses) do
     with TableExpenses do
     begin
       Append;
-      if EXPENSES[I].StoreID > 0 then
-        FieldByName('StoreID').AsInteger := EXPENSES[I].StoreID;
-      FieldByName('ProductID').AsInteger := EXPENSES[I].ProductID;
-      FieldByName('Amount').AsFloat := EXPENSES[I].Amount;
+      if CExpenses[I].StoreID > 0 then
+        FieldByName('StoreID').AsInteger := CExpenses[I].StoreID;
+      FieldByName('ProductID').AsInteger := CExpenses[I].ProductID;
+      FieldByName('Amount').AsFloat := CExpenses[I].Amount;
       FieldByName('Date').AsDateTime := Date - Random(10);
       Post;
     end;
@@ -260,7 +260,7 @@ end;
 
 procedure TDM.FillProducts;
 const
-  PRODUCTS: array[0..4] of record
+  CProducts: array[0..4] of record
     CategoryID: Integer;
     Name: string;
   end = (
@@ -274,28 +274,28 @@ var
   I: Integer;
 begin
   TableProducts.Active := True;
-  for I := Low(PRODUCTS) to High(PRODUCTS) do
+  for I := Low(CProducts) to High(CProducts) do
     with TableProducts do
     begin
       Append;
-      FieldByName('CategoryID').AsInteger := PRODUCTS[I].CategoryID;
-      FieldByName('Name').AsString := PRODUCTS[I].Name;
+      FieldByName('CategoryID').AsInteger := CProducts[I].CategoryID;
+      FieldByName('Name').AsString := CProducts[I].Name;
       Post;
     end;
 end;
 
 procedure TDM.FillStores;
 const
-  STORES: array[0..1] of string = ('Walmart', 'Ikea');
+  CStores: array[0..1] of string = ('Walmart', 'Ikea');
 var
   I: Integer;
 begin
   TableStores.Active := True;
-  for I := Low(STORES) to High(STORES) do
+  for I := Low(CStores) to High(CStores) do
     with TableStores do
     begin
       Append;
-      FieldByName('Name').AsString := STORES[I];
+      FieldByName('Name').AsString := CStores[I];
       Post;
     end;
 end;

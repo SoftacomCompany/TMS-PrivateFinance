@@ -134,7 +134,7 @@ end;
 
 procedure TDM.FillExpenses;
 const
-  EXPENSES: array[0..3] of record
+  CExpenses: array[0..3] of record
     StoreID: Integer;
     ProductID: Integer;
     Amount: Double;
@@ -145,14 +145,14 @@ const
     (StoreID: 0; ProductID: 5; Amount: 100.22)
   );
 begin
-  for var I := Low(EXPENSES) to High(EXPENSES) do
+  for var I := Low(CExpenses) to High(CExpenses) do
   begin
     var Expense := TExpense.Create;
     try
-      if EXPENSES[I].StoreID > 0 then
-        Expense.StoreId := Manager.Find<TStore>(EXPENSES[I].StoreID);
-      Expense.ProductId := Manager.Find<TProduct>(EXPENSES[I].ProductID);
-      Expense.Amount := EXPENSES[i].Amount;
+      if CExpenses[I].StoreID > 0 then
+        Expense.StoreId := Manager.Find<TStore>(CExpenses[I].StoreID);
+      Expense.ProductId := Manager.Find<TProduct>(CExpenses[I].ProductID);
+      Expense.Amount := CExpenses[i].Amount;
       Expense.Date := Date - Random(10);
       FManager.Save(Expense);
     except
@@ -165,7 +165,7 @@ end;
 
 procedure TDM.FillProducts;
 const
-  PRODUCTS: array[0..4] of record
+  CProducts: array[0..4] of record
     CategoryID: Integer;
     Name: string;
   end = (
@@ -176,12 +176,12 @@ const
     (CategoryID: 12; Name: 'Girls')
   );
 begin
-  for var I := Low(PRODUCTS) to High(PRODUCTS) do
+  for var I := Low(CProducts) to High(CProducts) do
   begin
     var Product := TProduct.Create;
     try
-      Product.CategoryId := Manager.Find<TCategory>(PRODUCTS[I].CategoryID);
-      Product.Name := PRODUCTS[I].Name;
+      Product.CategoryId := Manager.Find<TCategory>(CProducts[I].CategoryID);
+      Product.Name := CProducts[I].Name;
       FManager.Save(Product);
     except
       if not FManager.IsAttached(Product) then
@@ -193,13 +193,13 @@ end;
 
 procedure TDM.FillStores;
 const
-  STORES: array[0..1] of string = ('Walmart', 'Ikea');
+  CStores: array[0..1] of string = ('Walmart', 'Ikea');
 begin
-  for var I := Low(STORES) to High(STORES) do
+  for var I := Low(CStores) to High(CStores) do
   begin
     var Store := TStore.Create;
     try
-      Store.Name := STORES[I];
+      Store.Name := CStores[I];
       FManager.Save(Store);
     except
       if not FManager.IsAttached(Store) then
