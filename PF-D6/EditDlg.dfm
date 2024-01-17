@@ -2,7 +2,7 @@ object EditDialog: TEditDialog
   Left = 537
   Top = 366
   BorderStyle = bsDialog
-  Caption = 'EditDialog'
+  Caption = 'Modify data'
   ClientHeight = 220
   ClientWidth = 400
   Color = clBtnFace
