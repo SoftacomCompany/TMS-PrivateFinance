@@ -53,6 +53,18 @@ type
     SaveDialog1: TSaveDialog;
     TMSFNCBitmapContainer1: TTMSFNCBitmapContainer;
     PDFIO: TTMSFNCGridPDFIO;
+    TMSFNCRibbonToolBar1: TTMSFNCRibbonToolBar;
+    TMSFNCRibbonDefaultToolBarButton1: TTMSFNCRibbonDefaultToolBarButton;
+    TMSFNCRibbonToolBarSeparator3: TTMSFNCRibbonToolBarSeparator;
+    TMSFNCRibbonDefaultToolBarButton2: TTMSFNCRibbonDefaultToolBarButton;
+    TMSFNCRibbonDefaultToolBarButton3: TTMSFNCRibbonDefaultToolBarButton;
+    TMSFNCRibbonToolBar2: TTMSFNCRibbonToolBar;
+    TMSFNCRibbonDefaultToolBarButton4: TTMSFNCRibbonDefaultToolBarButton;
+    TMSFNCRibbonToolBarSeparator4: TTMSFNCRibbonToolBarSeparator;
+    TMSFNCRibbonDefaultToolBarButton5: TTMSFNCRibbonDefaultToolBarButton;
+    TMSFNCRibbonDefaultToolBarButton6: TTMSFNCRibbonDefaultToolBarButton;
+    TMSFNCRibbonToolBarSeparator5: TTMSFNCRibbonToolBarSeparator;
+    TMSFNCRibbonDefaultToolBarButton7: TTMSFNCRibbonDefaultToolBarButton;
     procedure FormCreate(Sender: TObject);
     procedure tvCategoriesAfterCheckNode(Sender: TObject; ANode: TTMSFNCTreeViewVirtualNode; AColumn: Integer);
     procedure tvCategoriesAfterUnCheckNode(Sender: TObject; ANode: TTMSFNCTreeViewVirtualNode; AColumn: Integer);
@@ -61,6 +73,7 @@ type
     procedure btnHTMLReportClick(Sender: TObject);
     procedure btnReportPdfClick(Sender: TObject);
     procedure btnDeleteClick(Sender: TObject);
+    procedure btnNotImplementedClick(Sender: TObject);
   private
     type TCloseMessage = type of Integer;
   private
@@ -219,6 +232,11 @@ begin
   BuildToolbars;
   BuildTree;
   gdaExpenses.Active := True;
+end;
+
+procedure TMainForm.btnNotImplementedClick(Sender: TObject);
+begin
+  ShowMessage('Not implemented yet');
 end;
 
 procedure TMainForm.btnDeleteClick(Sender: TObject);

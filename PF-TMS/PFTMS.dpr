@@ -1,7 +1,6 @@
 program PFTMS;
 
 uses
-  FastMM4,
   FMX.Forms,
   Main in 'Main.pas' {MainForm},
   dmData in 'dmData.pas' {DM: TDataModule},
